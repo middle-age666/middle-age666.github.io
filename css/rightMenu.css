@@ -1,0 +1,78 @@
+#rightMenu
+  display: none
+  position: fixed
+  width: 160px
+  height: fit-content
+  top: 10%
+  left: 10%
+  background-color: var(--icat-maskbgdeep)
+  backdrop-filter: blur(20px) saturate(1.5)
+  transform: translateZ(0)
+  border: var(--style-border)
+  border-radius: 8px
+  z-index: 99994
+  box-shadow: var(--icat-shadow-black)
+  transition: border 0.3s
+  user-select: none
+
+  &:hover
+    border: var(--style-border-hover-always)
+
+  .rightMenu-group
+    padding: 6px 6px
+
+    &:not(:nth-last-child(1))
+      border-bottom: 1px solid var(--icat-card-border)
+
+    &.rightMenu-small
+      display: flex
+      justify-content: space-between
+
+    &.rightMenu-line
+      .rightMenu-item
+        display: flex
+        height: 40px
+        padding: 0 4px
+        align-items: center
+        transition: .6s
+
+    .rightMenu-item
+      height: 30px
+      border-radius: 6px
+      transition: .3s
+      color: var(--font-color)
+      cursor: pointer
+
+      *
+        height: 40px
+        line-height: 40px
+
+      &:not(:last-child)
+        margin-bottom: 4px
+
+      &:hover
+        background-color: var(--icat-blue)
+        color: var(--icat-white)
+
+      i
+        display: inline-block
+        text-align: center
+        line-height: 30px
+        width: 30px
+        height: 30px
+        padding: 0 5px
+
+#rightMenu .rightMenu-group .rightMenu-item .icat-refresh,
+#rightMenu .rightMenu-group .rightMenu-item .icat-changing-over,
+#rightMenu .rightMenu-group .rightMenu-item .icat-simple-complex 
+  font-weight: 900
+
+#rightMenu-mask
+  position: fixed
+  width: 100vw
+  height: 100vh
+  background: 0 0
+  top: 0
+  left: 0
+  display: none
+  z-index: 998

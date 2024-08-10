@@ -1,0 +1,327 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>OpenAI跨界好莱坞：Sora电影制作工具即将登场，首曝剧情片细节及试用者评价 | 功夫猫猫</title><meta name="author" content="功夫猫猫"><meta name="copyright" content="功夫猫猫"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="OpenAI跨界好莱坞：Sora电影制作工具即将登场，首曝剧情片细节及试用者评价">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OpenAI跨界好莱坞：Sora电影制作工具即将登场，首曝剧情片细节及试用者评价">
+<meta property="og:url" content="https://0ks.cn/sora-hollywood/index.html">
+<meta property="og:site_name" content="功夫猫猫">
+<meta property="og:description" content="OpenAI跨界好莱坞：Sora电影制作工具即将登场，首曝剧情片细节及试用者评价">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://mvkersc.oss-cn-beijing.aliyuncs.com/img202403261140353.png">
+<meta property="article:published_time" content="2024-03-26T08:51:53.000Z">
+<meta property="article:modified_time" content="2024-08-10T16:23:34.776Z">
+<meta property="article:author" content="功夫猫猫">
+<meta property="article:tag" content="OpenAI">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mvkersc.oss-cn-beijing.aliyuncs.com/img202403261140353.png"><link rel="shortcut icon" href="/images/logo.jpg"><link rel="canonical" href="https://0ks.cn/sora-hollywood/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.14.0-b3"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.35/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>(()=>{
+      const saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+      
+      window.btf = {
+        saveToLocal: saveToLocal,
+        getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+          script.src = url
+          script.async = true
+          script.onerror = reject
+          script.onload = script.onreadystatechange = function() {
+            const loadState = this.readyState
+            if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+            script.onload = script.onreadystatechange = null
+            resolve()
+          }
+
+          Object.keys(attr).forEach(key => {
+            script.setAttribute(key, attr[key])
+          })
+
+          document.head.appendChild(script)
+        }),
+
+        getCSS: (url, id = false) => new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+          link.rel = 'stylesheet'
+          link.href = url
+          if (id) link.id = id
+          link.onerror = reject
+          link.onload = link.onreadystatechange = function() {
+            const loadState = this.readyState
+            if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+            link.onload = link.onreadystatechange = null
+            resolve()
+          }
+          document.head.appendChild(link)
+        }),
+
+        addGlobalFn: (key, fn, name = false, parent = window) => {
+          const pjaxEnable = false
+          if (!pjaxEnable && key.startsWith('pjax')) return
+
+          const globalFn = parent.globalFn || {}
+          const keyObj = globalFn[key] || {}
+    
+          if (name && keyObj[name]) return
+    
+          name = name || Object.keys(keyObj).length
+          keyObj[name] = fn
+          globalFn[key] = keyObj
+          parent.globalFn = globalFn
+        }
+      }
+    
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+      
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })()</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":true,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'OpenAI跨界好莱坞：Sora电影制作工具即将登场，首曝剧情片细节及试用者评价',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-08-11 00:23:34'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="功夫猫猫" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/images/loading.gif" data-original="/images/logo.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">79</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a><a href="/c/"><div class="headline">分类</div><div class="length-num">20</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/c/WildCard/"><i class="fa-fw fas fa-archive"></i><span> WildCard虚拟信用卡</span></a></div><div class="menus_item"><a class="site-page" href="/c/OpenAI/ChatGPT/"><i class="fa-fw fas fa-tags"></i><span> ChatGPT</span></a></div><div class="menus_item"><a class="site-page" href="/c/OpenAI/Sora/"><i class="fa-fw fas fa-music"></i><span> Sora</span></a></div><div class="menus_item"><a class="site-page" href="/c/Onlyfans/"><i class="fa-fw fas fa-video"></i><span> OnlyFans</span></a></div><div class="menus_item"><a class="site-page" href="/c/MidJourney/"><i class="fa-fw fas fa-link"></i><span> Midjourney</span></a></div><div class="menus_item"><a class="site-page" href="/c/Claude3/"><i class="fa-fw fas fa-heart"></i><span> Claude3</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img fixed" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="功夫猫猫"><img class="site-icon" src="/images/loading.gif" data-original="/images/logo.jpg" alt="Logo"/><span class="site-name">功夫猫猫</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/c/WildCard/"><i class="fa-fw fas fa-archive"></i><span> WildCard虚拟信用卡</span></a></div><div class="menus_item"><a class="site-page" href="/c/OpenAI/ChatGPT/"><i class="fa-fw fas fa-tags"></i><span> ChatGPT</span></a></div><div class="menus_item"><a class="site-page" href="/c/OpenAI/Sora/"><i class="fa-fw fas fa-music"></i><span> Sora</span></a></div><div class="menus_item"><a class="site-page" href="/c/Onlyfans/"><i class="fa-fw fas fa-video"></i><span> OnlyFans</span></a></div><div class="menus_item"><a class="site-page" href="/c/MidJourney/"><i class="fa-fw fas fa-link"></i><span> Midjourney</span></a></div><div class="menus_item"><a class="site-page" href="/c/Claude3/"><i class="fa-fw fas fa-heart"></i><span> Claude3</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">OpenAI跨界好莱坞：Sora电影制作工具即将登场，首曝剧情片细节及试用者评价</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-03-26T08:51:53.000Z" title="发表于 2024-03-26 16:51:53">2024-03-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-08-10T16:23:34.776Z" title="更新于 2024-08-11 00:23:34">2024-08-11</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/c/OpenAI/">OpenAI</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/c/OpenAI/Sora/">Sora</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>11分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="OpenAI跨界好莱坞：Sora电影制作工具即将登场，首曝剧情片细节及试用者评价"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="post-content" id="article-container"><p>自OpenAI推出文生视频大模型Sora以来，其在电影制作领域的潜力已然引起了业界的热烈讨论与期待。Sora的初步试用反馈积极，艺术家们的作品展示也令人惊艳，而OpenAI与好莱坞的合作交流更是预示着电影制作领域即将迎来一场革命性的变革。</p>
+<p>近期，OpenAI与好莱坞电影制作人的合作备受瞩目，Sora以其独特的文生成视频技术，为电影制作领域带来了前所未有的突破。本文将深入剖析Sora的技术特点，展现艺术家们在使用过程中的真实体验，并探讨OpenAI与好莱坞的合作计划，以期全面解读Sora在电影制作中的革命性意义以及未来广阔的发展前景。</p>
+<span id="more"></span>
+
+<h2 id="精选文章"><a href="#精选文章" class="headerlink" title="精选文章"></a>精选文章</h2><table>
+<thead>
+<tr>
+<th align="left">类别</th>
+<th align="left">教程</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Claude</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://7we.cn/resolve-claude3-banned/">如何解决Claude账号被封，及Claude3使用方法</a><br /><a target="_blank" rel="noopener" href="https://7we.cn/register-claude3/"><font color="ff8000">Claude3注册教程，解决Claude手机号验证问题</font></a><br /> <a target="_blank" rel="noopener" href="https://7we.cn/register-claude3-anthropic/">Anthropic官网提供Claude3注册及使用教程|以及如何预防封号</a></td>
+</tr>
+<tr>
+<td align="left">Sora</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://7we.cn/how-to-use-sora/"><font color="ff8000">详细教程与使用指南助您轻松上手Sora</font></a><br /><a target="_blank" rel="noopener" href="https://7we.cn/what-is-sora/"><font color="ff8000">OpenAI Sora是什么？Sora到底能做什么？它与其他类似技术有什么区别</font></a></td>
+</tr>
+<tr>
+<td align="left">ChatGPT</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://7we.cn/subscribe-chatgpt-plus-in-five-minutes/"><font color="ff8000">国内升级GPT-Plus教程，订阅GTP4-0</font></a><br /><a target="_blank" rel="noopener" href="https://7we.cn/register-chatgpt-without-phone/"><font color="ff8000">国内无需手机验证码获取GPT账号教程</font></a><br /><a target="_blank" rel="noopener" href="https://7we.cn/register-apple-id/"><font color="ff8000">【2024亲测】保姆级获取美区Apple Id教程</font></a></td>
+</tr>
+<tr>
+<td align="left">Onlyfans</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://7we.cn/register-onlyfans/"><font color="ff8000">Onlyfans-注册以及充值、订阅教程</font></a><br /><a target="_blank" rel="noopener" href="https://7we.cn/how-to-search-blogger-on-onlyfans/"><font color="ff8000">【2024亲测】Onlyfans搜索博主？如何在OnlyFans搜索HongkongDoll</font></a></td>
+</tr>
+<tr>
+<td align="left">Midjourney</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://7we.cn/subscribe-midjourney/"><font color="ff8000">【一看就会】五分钟完成MidJourney订阅</font></a></td>
+</tr>
+<tr>
+<td align="left">WildCard</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://7we.cn/register-wildcard/"><font color="ff8000">WildCard虚拟信用卡注册保姆级教程</font></a><br /><a target="_blank" rel="noopener" href="https://7we.cn/wildcard-info/"><font color="ff8000">WildCard虚拟信用卡平台详解</font></a></td>
+</tr>
+<tr>
+<td align="left">其他</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://7we.cn/register-patreon/"><font color="ff8000">【新手小白教程】2024最新：如何轻松订阅Patreon及其支付、充值全攻略</font></a><br /><a target="_blank" rel="noopener" href="https://7we.cn/register-youtube-premium/"><font color="ff8000">【新手小白】如何订阅Youtube Premium？Youtube Premium购买教程（2024最新）</font></a></td>
+</tr>
+</tbody></table>
+<h2 id="Sora试用反馈"><a href="#Sora试用反馈" class="headerlink" title="Sora试用反馈"></a>Sora试用反馈</h2><p>OpenAI推出的文生成视频大模型Sora已经满月有余，如今我们迎来了首批试用反馈的集结！</p>
+<p>在当地时间3月25日，OpenAI官方网站上详尽展示了与艺术家和电影制片人的初期合作硕果，生动描绘了Sora如何将创意转化为现实的神奇之旅。</p>
+<p>导演Paul Trillo热情分享了他的体验：“Sora最令人瞩目的特质在于其将那些前所未有、甚至未曾想象过的创意变为现实的能力，这为我们打开了全新的创意空间。”</p>
+<p>多媒体制作公司shy kids也对Sora赞不绝口：“Sora在生成逼真图像方面的表现堪称卓越，但更让我们激动的是它超凡的创造力，能够打造出完全超现实的作品，引领我们进入全新的视觉体验。”</p>
+<p>尽管Sora在内测阶段已展现出令人惊艳的能力，但OpenAI却迟迟未向公众开放这一技术。知名科技作家Robert Scoble在社交平台X上提出了自己的观点，他认为普通用户每月支付的20美元费用远远无法覆盖生成人工智能视频所需的成本，这或许正是OpenAI在开放决策上谨慎行事的原因。尽管我们渴望尽早体验Sora的魅力，但成本考量无疑是一个现实而重要的因素。</p>
+<p><img src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/img202403261150677.jpeg" alt="img"></p>
+<h2 id="艺术家们的作品展示"><a href="#艺术家们的作品展示" class="headerlink" title="艺术家们的作品展示"></a>艺术家们的作品展示</h2><h3 id="《无头气球人》——shy-kids的创意之作"><a href="#《无头气球人》——shy-kids的创意之作" class="headerlink" title="《无头气球人》——shy kids的创意之作"></a>《无头气球人》——shy kids的创意之作</h3><p>多媒体制作公司shy kids利用先进的Sora技术，成功打造了一部震撼人心的气球人短片，为观众呈现了一场别开生面的创意盛宴。这支由Walter Woodman、Sidney Leeder和Patrick Cederberg组成的才华横溢的团队激动地表示：“现在我们能够扩展以前认为无法实现的故事边界，将想象变为现实。”</p>
+<p>Walter Woodman执导的《无头气球人》深受Sora的启发，他热情洋溢地评论道：“Sora不仅擅长生成逼真图像，更能创造出令人叹为观止的超现实场景，这为我们带来了无尽的创作灵感。我相信，这将开启一个抽象表现主义的新纪元。”</p>
+<p>谈及整个电影制作行业的变革，他们满怀期待地表示：“如今，世界各地所有怀揣着故事梦想的人们终于有了向世界展示他们内心深处奇妙世界的机会。Sora将为我们打开一个全新的创意大门，让电影制作变得更加多元、自由和创新。”</p>
+<p><img src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/img202403261136936.png" alt="image-20240326113635183"></p>
+<h3 id="导演，Paul-Trillo"><a href="#导演，Paul-Trillo" class="headerlink" title="导演，Paul Trillo"></a>导演，Paul Trillo</h3><p>Paul Trillo，一位跨界艺术家、作家及导演，他的作品深受《滚石杂志》与《纽约客》等权威媒体的高度赞誉，并荣获了令人瞩目的19项Vimeo编辑推荐奖，这一殊荣旨在表彰在Vimeo平台上播放的杰出短片。谈及Sora，Paul难掩激动之情：“使用Sora是我首次体验到作为电影制作人的无限自由。它让我摆脱了时间、资金及他人许可的束缚，使我能够大胆、富有激情地构思与实验。”他的实验性视频作品正是这种全新创作方式的生动体现。Paul进一步强调：“Sora最令人惊叹之处在于，它能够将那些前所未有、我们甚至未曾想象过的新想法变为现实，为我们打开了一个全新的创意世界。”</p>
+<p><img src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/img202403261137661.png" alt="image-20240326113738887"></p>
+<h3 id="创意总监-Native-Foreign，Nik-Kleverov"><a href="#创意总监-Native-Foreign，Nik-Kleverov" class="headerlink" title="创意总监 &#x2F; Native Foreign，Nik Kleverov"></a>创意总监 &#x2F; Native Foreign，Nik Kleverov</h3><p>Native Foreign，这家总部位于洛杉矶的创意机构，凭借其在品牌叙事、动态图形、标题设计以及生成式AI工作流程方面的卓越表现，屡获艾美奖提名认可。公司的联合创始人Nik Kleverov正积极运用Sora技术，为品牌合作伙伴提供概念可视化和快速创意迭代服务。他兴奋地表示：“作为一位充满创意想法的动态思维者，当我开始使用Sora时，我真切地感受到了将任何概念化为现实的强大能力。”</p>
+<p><img src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/img202403261138755.png" alt="image-20240326113811939"></p>
+<h3 id="艺术家-音乐人，August-Kamp"><a href="#艺术家-音乐人，August-Kamp" class="headerlink" title="艺术家&#x2F;音乐人，August Kamp"></a>艺术家&#x2F;音乐人，August Kamp</h3><p>August Kamp，这位集音乐家、研究员、创意活动家和跨学科艺术家于一身的杰出人才，分享了她对Sora的深刻感受：“对我来说，Sora无疑标志着一个真正的转折点。作为一名艺术家，我长久以来一直受到想象力与技术手段之间脱节的困扰，这限制了我的创作空间。”她进一步解释道：“现在，我能够如此直观地构建和迭代电影视觉效果，这为我打开了全新的艺术道路，让我能够更自由地表达内心的想法。我满怀期待地想知道，未来这些先进的工具还将以何种令人惊艳的形式，继续为我们讲述精彩纷呈的故事。”</p>
+<p><img src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/img202403261139169.png" alt="image-20240326113920556"></p>
+<h3 id="创意总监，Josephine-Miller"><a href="#创意总监，Josephine-Miller" class="headerlink" title="创意总监，Josephine Miller"></a>创意总监，Josephine Miller</h3><p>Josephine Miller，伦敦Oraar工作室的联合创始人兼创意总监，该工作室专注于3D视觉、增强现实和数字时尚设计的创新探索。她激动不已地表示：“Sora为我打开了多年来那些技术上无法实现的想法变为现实的可能性，这真是一场革命性的体验。”她进一步阐述道：“如此迅速地将概念转化为高质量的作品，不仅对我的创作过程构成了全新的挑战，更帮助我改进了叙事方式，让我的作品更具深度和层次。它让我能够更自由地发挥想象力，彻底摆脱了技术的束缚，实现了我长久以来的艺术追求。”</p>
+<p><img src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/img202403261140353.png" alt="image-20240326114010779"></p>
+<h3 id="数字-AR-XR-艺术家，Don-Allen-Stevenson-III"><a href="#数字-AR-XR-艺术家，Don-Allen-Stevenson-III" class="headerlink" title="数字 AR&#x2F;XR 艺术家，Don Allen Stevenson III"></a>数字 AR&#x2F;XR 艺术家，Don Allen Stevenson III</h3><p>Don Allen III，一位从梦工厂动画公司起步的跨学科创作者、演讲者和顾问，他与众多科技和娱乐公司紧密合作，在混合现实、虚拟现实和人工智能应用方面取得了卓越成就。他兴奋地分享道：“长久以来，我一直在脑海中构思混合现实的混合生物，认为这些想法极具趣味性和创新性。如今，借助Sora，我能够以更简便的方式将这些概念原型化，并在空间计算机中完整构建出我梦寐以求的3D角色。”</p>
+<p>Don认为Sora的“怪异”特质正是其最大的优势所在：“它超越了传统物理定律和思维惯例的束缚，为我们带来了前所未有的创意空间。”他进一步解释道，使用Sora让他的注意力从繁琐的技术障碍转移到了纯粹的创造力上，为他开启了一个即时可视化和快速原型制作的新世界。</p>
+<p>同时，Don也表达了他对Sora的深深期待：“我觉得这能让我将更多的时间和精力投入到真正重要的事情上，比如如何让我的角色产生深刻的情感影响。Sora不仅是一个强大的创作工具，更是我实现艺术愿景的得力助手。”</p>
+<p><img src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/img202403261140412.png" alt="image-20240326114037793"></p>
+<h3 id="雕塑家-艺术家，Alex-Reben"><a href="#雕塑家-艺术家，Alex-Reben" class="headerlink" title="雕塑家&#x2F;艺术家，Alex Reben"></a>雕塑家&#x2F;艺术家，Alex Reben</h3><p>Alexander Reben，一位以探索人类天性中幽默与荒诞而闻名的艺术家，在过去的十年里，他致力于通过人工智能的透镜来揭示这些深层次的情感与特质。他巧妙地利用人工智能生成的图像创作雕塑，进而将这些虚拟的创意转化为实体世界的3D模型，使它们得以触手可及。</p>
+<p>谈及Sora，他难掩兴奋之情：“我的Sora体验仿佛为我开启了一扇通往3D雕塑新世界的大门。我的创作思路因此得以拓展，开始深入探索摄影测量学及其在雕塑领域的无限可能性。”他对将视频转换为3D模型的前景充满热情与期待，因为这预示着人工智能系统能够超越其原有的边界，走向更加广阔的创意领域。</p>
+<p><img src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/img202403261141576.png" alt="image-20240326114106201"></p>
+<h2 id="OpenAI与好莱坞的合作计划"><a href="#OpenAI与好莱坞的合作计划" class="headerlink" title="OpenAI与好莱坞的合作计划"></a>OpenAI与好莱坞的合作计划</h2><p>OpenAI即将在洛杉矶盛大举办一场会议，诚邀好莱坞电影公司、媒体行业高管以及人才机构共襄盛举，展开深度交流与合作。此次会议旨在在娱乐产业内建立稳固的合作关系，并激发电影制作人的创新精神，将OpenAI的人工智能视频生成器Sora无缝融入其创作工作流程中。</p>
+<p>据消息人士透露，此次会议是OpenAI近期一系列外展活动的重要组成部分。早在2月底，OpenAI便已在好莱坞举办了一场别开生面的介绍性对话活动，由首席运营官Brad Lightcap亲自主持。在这场活动中，Lightcap与他的团队共同展示了Sora的卓越功能，其能够根据用户提供的文本提示，生成长达约一分钟的逼真视频，令人叹为观止。</p>
+<p>尽管目前Sora仍处于未正式发布的阶段，但其展现出的巨大潜力已让人充满期待。此次会议将是一次绝佳的机会，让各方共同探讨如何将这一创新技术应用于娱乐产业，开创全新的创作模式与体验。</p>
+<p><img src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/img202403261154942.jpeg" alt="img"></p>
+<p>3月份，OpenAI的首席执行官山姆·奥特曼（Sam Altman）亲临洛杉矶，现身奥斯卡颁奖典礼后的派对，与各界精英进行了深入的交流。作为ChatGPT的缔造者，OpenAI始终站在生成式人工智能技术的最前沿。在2月中旬推出的Sora更是引起了轰动，一系列高清视频剪辑的展示，让好莱坞和硅谷的目光纷纷聚焦。尽管Sora尚未向公众开放，技术仍需进一步打磨，但OpenAI已经赋予了一些知名演员和导演访问权限，让他们率先体验这一前沿技术。</p>
+<p>近日，OpenAI的工程师们不断展示Sora生成的各种高清视频，其中不乏令人眼前一亮的作品。例如，一个视频中的提示词为：“海盗小猫骑着机器人吸尘器。”这样富有创意的想象，在Sora的呈现下变得栩栩如生。</p>
+<p>OpenAI发言人在声明中表示：“OpenAI制定了周密的战略，通过与各行业合作，分阶段推出人工智能技术进步，以确保其安全实施，并让人们了解即将发生的变革。我们期待与艺术家和创意人员展开持续的对话，共同探索更多可能性。”</p>
+<p>然而，在好莱坞这个充满创意与激情的舞台上，人工智能也引发了诸多争议。越来越多的电影制作人和工作室开始利用人工智能进行前期制作和后期制作，他们看到了新型人工智能工具的巨大潜力。但与此同时，生成式人工智能能够迅速产出文本、图像、音频甚至越来越逼真的短视频，这让人们开始担忧，它是否会颠覆从插画师到配音演员等职业的生存空间。</p>
+<p>去年，好莱坞的编剧和演员们曾发起罢工，部分原因就是为了争取在自动化技术面前的保障。两大工会也随后制定了针对人工智能在娱乐行业使用的保障措施。同时，媒体公司对于OpenAI在其作品中使用内容而不给予补偿的做法也持谨慎态度。据报道，CNN、福克斯和时代杂志等媒体已经开始探讨与OpenAI合作，授权其作品使用的可能性。</p>
+<p>值得一提的是，OpenAI并非视频生成领域的先行者。科技巨头Meta和谷歌此前也公布了一系列文本转视频的研究项目。此外，众多初创公司如Runway、Pika和Stability AI也在积极研究这项技术。Runway更是报告称，其第二代文本转视频服务的用户数量已达数百万，其中包括众多制作和动画工作室的专业人士。甚至有电影剪辑师利用Runway制作视频，将AI生成的内容与其他素材融合，创造出独特的视觉效果。</p>
+<p>然而，目前所有这些产品都面临着同一个挑战：如何与OpenAI竞争。作为行业的领军者，OpenAI的Sora无疑具备强大的竞争力。但关于AI生成视频素材的定价问题，目前仍处于研究预览阶段的Sora尚未确定最终定价策略。这无疑为市场留下了巨大的想象空间，也让人对OpenAI未来的布局充满期待。</p>
+<blockquote>
+<p>原文链接：<a target="_blank" rel="noopener" href="https://7we.cn/sora-hollywood/">OpenAI跨界好莱坞：Sora电影制作工具即将登场，首曝剧情片细节及试用者评价</a></p>
+</blockquote>
+<hr>
+<p><strong>你好，我是火哥！</strong></p>
+<p>亲爱的读者你好，我是<strong>火哥</strong>，一个乐于分享技术类干货的博主。 最新原创的文章都先发布在公众号，欢迎关注哦~</p>
+<p><strong>扫描下方二维码</strong>，带你第一时间了解ChatGPT、Sora、Midjourney最新动态！</p>
+<p><img src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/9475746462373236362612.png" alt="9475746462373236362612"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://0ks.cn">功夫猫猫</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://0ks.cn/sora-hollywood/">https://0ks.cn/sora-hollywood/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://0ks.cn" target="_blank">功夫猫猫</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/OpenAI/">OpenAI</a></div><div class="post_share"><div class="social-share" data-image="https://mvkersc.oss-cn-beijing.aliyuncs.com/img202403261140353.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/chatgpt-export-chat-data/" title="快速备份与检索ChatGPT对话记录，以及便捷关闭聊天历史教程"><img class="cover" src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/Snipaste_2024-03-26_17-00-58.png" onerror="onerror=null;src='/img/loading.gif'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">快速备份与检索ChatGPT对话记录，以及便捷关闭聊天历史教程</div></div></a></div><div class="next-post pull-right"><a href="/midjourney-consistency/" title="Midjourney迎来重大更新！深度解析全新「角色一致性」命令"><img class="cover" src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/image-20240325223250284.png" onerror="onerror=null;src='/img/loading.gif'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Midjourney迎来重大更新！深度解析全新「角色一致性」命令</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/apply-sora-beta-test/" title="OpenAI Sora内测资格申请"><img class="cover" src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/image-20240315185411919.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-03-15</div><div class="title">OpenAI Sora内测资格申请</div></div></a></div><div><a href="/how-sora-works/" title="Sora原理深度解析：OpenAI Sora的工作原理全面解读"><img class="cover" src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/image-20240323022423823.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-03-22</div><div class="title">Sora原理深度解析：OpenAI Sora的工作原理全面解读</div></div></a></div><div><a href="/how-to-use-sora/" title="详细教程与使用指南助您轻松上手Sora"><img class="cover" src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/image-20240323225713228.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-03-23</div><div class="title">详细教程与使用指南助您轻松上手Sora</div></div></a></div><div><a href="/register-chatgpt-with-gmail/" title="【亲测】Proton收不到OpenAi邮件？换这个邮箱试试？"><img class="cover" src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/image-20240313141543414.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-03-15</div><div class="title">【亲测】Proton收不到OpenAi邮件？换这个邮箱试试？</div></div></a></div><div><a href="/what-is-sora/" title="OpenAI Sora是什么？Sora到底能做什么？它与其他类似技术有什么区别"><img class="cover" src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/image-20240315181525944.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-03-15</div><div class="title">OpenAI Sora是什么？Sora到底能做什么？它与其他类似技术有什么区别</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/images/loading.gif" data-original="/images/logo.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">功夫猫猫</div><div class="author-info__description">我是功夫猫猫，一名热爱AIGC的博主，如果你觉得我的文章内容还不错请收藏转发吧</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">79</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a><a href="/c/"><div class="headline">分类</div><div class="length-num">20</div></a></div></div><div class="card-widget tzy-right-widget" id="card-wechat"><div id="flip-wrapper"><div id="flip-content"><div class="face"></div><div class="back face"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B2%BE%E9%80%89%E6%96%87%E7%AB%A0"><span class="toc-number">1.</span> <span class="toc-text">精选文章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sora%E8%AF%95%E7%94%A8%E5%8F%8D%E9%A6%88"><span class="toc-number">2.</span> <span class="toc-text">Sora试用反馈</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%89%BA%E6%9C%AF%E5%AE%B6%E4%BB%AC%E7%9A%84%E4%BD%9C%E5%93%81%E5%B1%95%E7%A4%BA"><span class="toc-number">3.</span> <span class="toc-text">艺术家们的作品展示</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%8A%E6%97%A0%E5%A4%B4%E6%B0%94%E7%90%83%E4%BA%BA%E3%80%8B%E2%80%94%E2%80%94shy-kids%E7%9A%84%E5%88%9B%E6%84%8F%E4%B9%8B%E4%BD%9C"><span class="toc-number">3.1.</span> <span class="toc-text">《无头气球人》——shy kids的创意之作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E6%BC%94%EF%BC%8CPaul-Trillo"><span class="toc-number">3.2.</span> <span class="toc-text">导演，Paul Trillo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E6%84%8F%E6%80%BB%E7%9B%91-Native-Foreign%EF%BC%8CNik-Kleverov"><span class="toc-number">3.3.</span> <span class="toc-text">创意总监 &#x2F; Native Foreign，Nik Kleverov</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%89%BA%E6%9C%AF%E5%AE%B6-%E9%9F%B3%E4%B9%90%E4%BA%BA%EF%BC%8CAugust-Kamp"><span class="toc-number">3.4.</span> <span class="toc-text">艺术家&#x2F;音乐人，August Kamp</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E6%84%8F%E6%80%BB%E7%9B%91%EF%BC%8CJosephine-Miller"><span class="toc-number">3.5.</span> <span class="toc-text">创意总监，Josephine Miller</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%AD%97-AR-XR-%E8%89%BA%E6%9C%AF%E5%AE%B6%EF%BC%8CDon-Allen-Stevenson-III"><span class="toc-number">3.6.</span> <span class="toc-text">数字 AR&#x2F;XR 艺术家，Don Allen Stevenson III</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%95%E5%A1%91%E5%AE%B6-%E8%89%BA%E6%9C%AF%E5%AE%B6%EF%BC%8CAlex-Reben"><span class="toc-number">3.7.</span> <span class="toc-text">雕塑家&#x2F;艺术家，Alex Reben</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OpenAI%E4%B8%8E%E5%A5%BD%E8%8E%B1%E5%9D%9E%E7%9A%84%E5%90%88%E4%BD%9C%E8%AE%A1%E5%88%92"><span class="toc-number">4.</span> <span class="toc-text">OpenAI与好莱坞的合作计划</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/how-to-subscribe-gpt-claude-poe-github/" title="(2024教程）ChatGPT、OnlyFans、perplexity、Claude、Poe等信用卡银行卡无法绑定，无法支付等问题解决方法">(2024教程）ChatGPT、OnlyFans、perplexity、Claude、Poe等信用卡银行卡无法绑定，无法支付等问题解决方法</a><time datetime="2024-08-09T04:46:53.000Z" title="发表于 2024-08-09 12:46:53">2024-08-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/fomepay-fomecard-run-away/" title="网传fomepay和fomecard虚拟卡平台跑路了！"><img src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/Snipaste20240810221112.jpg" onerror="this.onerror=null;this.src='/img/loading.gif'" alt="网传fomepay和fomecard虚拟卡平台跑路了！"/></a><div class="content"><a class="title" href="/fomepay-fomecard-run-away/" title="网传fomepay和fomecard虚拟卡平台跑路了！">网传fomepay和fomecard虚拟卡平台跑路了！</a><time datetime="2024-08-08T04:46:53.000Z" title="发表于 2024-08-08 12:46:53">2024-08-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/hello-world2/" title="Hello World">Hello World</a><time datetime="2024-07-25T16:30:03.973Z" title="发表于 2024-07-26 00:30:03">2024-07-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/hello-world1/" title="Hello World">Hello World</a><time datetime="2024-07-25T16:29:57.077Z" title="发表于 2024-07-26 00:29:57">2024-07-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/chatgpt-paper-steps/" title="ChatGPT写论文必学技巧！ChatGPT十步搞定论文写作！全流程指导！附提示词"><img src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/Snipaste20240725151842.png" onerror="this.onerror=null;this.src='/img/loading.gif'" alt="ChatGPT写论文必学技巧！ChatGPT十步搞定论文写作！全流程指导！附提示词"/></a><div class="content"><a class="title" href="/chatgpt-paper-steps/" title="ChatGPT写论文必学技巧！ChatGPT十步搞定论文写作！全流程指导！附提示词">ChatGPT写论文必学技巧！ChatGPT十步搞定论文写作！全流程指导！附提示词</a><time datetime="2024-07-25T04:46:53.000Z" title="发表于 2024-07-25 12:46:53">2024-07-25</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="ft"><div class="ft-item-2"><p class="ft-t">推荐友链</p><div class="ft-img-group"><div class="img-group-item"><a target="_blank" rel="noopener" href="https://7we.cn/">火哥研习社</a></div></div></div></div><div class="copyright">&copy;2020 - 2024 By 功夫猫猫</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.14.0-b3"></script><script src="/js/main.js?v=4.14.0-b3"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.35/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  const runMermaid = (ele) => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from(ele).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const codeToMermaid = () => {
+    const codeMermaidEle = document.querySelectorAll('pre > code.mermaid')
+    if (codeMermaidEle.length === 0) return
+    
+    codeMermaidEle.forEach(ele => {
+      const newEle = document.createElement('div')
+      newEle.className = 'mermaid-wrap'
+      newEle.innerHTML = `<pre class="mermaid-src" hidden>${ele.textContent}</pre>`
+      ele.parentNode.replaceWith(newEle)
+    })
+  }
+
+  const loadMermaid = () => {
+    if (false) codeToMermaid()
+    const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+    if ($mermaid.length === 0) return
+
+    const runMermaidFn = () => runMermaid($mermaid)
+    btf.addGlobalFn('themeChange', runMermaidFn, 'mermaid')
+    window.loadMermaid ? runMermaidFn() : btf.getScript('https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js').then(runMermaidFn)
+  }
+  
+  btf.addGlobalFn('encrypt', loadMermaid, 'mermaid')
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/fireworks.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div>
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var a=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,d=o();function o(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(t){(a||t)&&(d=o());for(var e,i=0;i<d.length;i++)0<=(e=(e=d[i]).getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,a,n,o=d[i];e=function(){d=d.filter(function(t){return o!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(o)},(t=o).dataset.loaded||(t.hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(a=new Image,n=t.getAttribute("data-original"),a.onload=function(){t.src=n,t.removeAttribute("data-original"),t.setAttribute("data-loaded",!0),e&&e()},a.onerror=function(){t.removeAttribute("data-original"),t.setAttribute("data-loaded",!1),t.src=n},t.src!==n&&(a.src=n)))}()}function e(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",e),r.addEventListener("resize",e),r.addEventListener("orientationchange",e)}(this);</script></body></html>

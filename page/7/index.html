@@ -1,0 +1,456 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>功夫猫猫</title><meta name="author" content="功夫猫猫"><meta name="copyright" content="功夫猫猫"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="我是功夫猫猫，一名热爱AIGC的博主，如果你觉得我的文章内容还不错请收藏转发吧">
+<meta property="og:type" content="website">
+<meta property="og:title" content="功夫猫猫">
+<meta property="og:url" content="https://0ks.cn/page/7/index.html">
+<meta property="og:site_name" content="功夫猫猫">
+<meta property="og:description" content="我是功夫猫猫，一名热爱AIGC的博主，如果你觉得我的文章内容还不错请收藏转发吧">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://0ks.cn/images/logo.jpg">
+<meta property="article:author" content="功夫猫猫">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://0ks.cn/images/logo.jpg"><link rel="shortcut icon" href="/images/logo.jpg"><link rel="canonical" href="https://0ks.cn/page/7/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.14.0-b3"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.35/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>(()=>{
+      const saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+      
+      window.btf = {
+        saveToLocal: saveToLocal,
+        getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+          script.src = url
+          script.async = true
+          script.onerror = reject
+          script.onload = script.onreadystatechange = function() {
+            const loadState = this.readyState
+            if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+            script.onload = script.onreadystatechange = null
+            resolve()
+          }
+
+          Object.keys(attr).forEach(key => {
+            script.setAttribute(key, attr[key])
+          })
+
+          document.head.appendChild(script)
+        }),
+
+        getCSS: (url, id = false) => new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+          link.rel = 'stylesheet'
+          link.href = url
+          if (id) link.id = id
+          link.onerror = reject
+          link.onload = link.onreadystatechange = function() {
+            const loadState = this.readyState
+            if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+            link.onload = link.onreadystatechange = null
+            resolve()
+          }
+          document.head.appendChild(link)
+        }),
+
+        addGlobalFn: (key, fn, name = false, parent = window) => {
+          const pjaxEnable = false
+          if (!pjaxEnable && key.startsWith('pjax')) return
+
+          const globalFn = parent.globalFn || {}
+          const keyObj = globalFn[key] || {}
+    
+          if (name && keyObj[name]) return
+    
+          name = name || Object.keys(keyObj).length
+          keyObj[name] = fn
+          globalFn[key] = keyObj
+          parent.globalFn = globalFn
+        }
+      }
+    
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+      
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })()</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":true,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '功夫猫猫',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-08-11 02:18:25'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="功夫猫猫" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/images/loading.gif" data-original="/images/logo.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">79</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a><a href="/c/"><div class="headline">分类</div><div class="length-num">20</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/c/WildCard/"><i class="fa-fw fas fa-archive"></i><span> WildCard虚拟信用卡</span></a></div><div class="menus_item"><a class="site-page" href="/c/OpenAI/ChatGPT/"><i class="fa-fw fas fa-tags"></i><span> ChatGPT</span></a></div><div class="menus_item"><a class="site-page" href="/c/OpenAI/Sora/"><i class="fa-fw fas fa-music"></i><span> Sora</span></a></div><div class="menus_item"><a class="site-page" href="/c/Onlyfans/"><i class="fa-fw fas fa-video"></i><span> OnlyFans</span></a></div><div class="menus_item"><a class="site-page" href="/c/MidJourney/"><i class="fa-fw fas fa-link"></i><span> Midjourney</span></a></div><div class="menus_item"><a class="site-page" href="/c/Claude3/"><i class="fa-fw fas fa-heart"></i><span> Claude3</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-top-img fixed" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="功夫猫猫"><img class="site-icon" src="/images/loading.gif" data-original="/images/logo.jpg" alt="Logo"/><span class="site-name">功夫猫猫</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/c/WildCard/"><i class="fa-fw fas fa-archive"></i><span> WildCard虚拟信用卡</span></a></div><div class="menus_item"><a class="site-page" href="/c/OpenAI/ChatGPT/"><i class="fa-fw fas fa-tags"></i><span> ChatGPT</span></a></div><div class="menus_item"><a class="site-page" href="/c/OpenAI/Sora/"><i class="fa-fw fas fa-music"></i><span> Sora</span></a></div><div class="menus_item"><a class="site-page" href="/c/Onlyfans/"><i class="fa-fw fas fa-video"></i><span> OnlyFans</span></a></div><div class="menus_item"><a class="site-page" href="/c/MidJourney/"><i class="fa-fw fas fa-link"></i><span> Midjourney</span></a></div><div class="menus_item"><a class="site-page" href="/c/Claude3/"><i class="fa-fw fas fa-heart"></i><span> Claude3</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/onlyfans-issues/" title="Onlyfans年龄验证、地址错误等问题解决方案"><img class="post-bg" src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/image-20240320233250892.png" onerror="this.onerror=null;this.src='/img/loading.gif'" alt="Onlyfans年龄验证、地址错误等问题解决方案"></a></div><div class="recent-post-info"><a class="article-title" href="/onlyfans-issues/" title="Onlyfans年龄验证、地址错误等问题解决方案"><i class="fas fa-thumbtack sticky"></i>Onlyfans年龄验证、地址错误等问题解决方案</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-03-14T14:42:21.000Z" title="发表于 2024-03-14 22:42:21">2024-03-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/c/Onlyfans/">Onlyfans</a></span></div><div class="content">前言在使用Onlyfans平台时，我们可能会遭遇一系列问题，如地址错误、支付失败以及年龄验证不通过等。这些问题的根源主要源于两个方面。首先，使用国内邮箱进行注册，可能触发了平台的某些安全机制，导致账户在验证环节遭遇阻碍。其次，IP地址的问题同样不容忽视。如果IP地址不符合Onlyfans的要求或被视为风险IP，那么在进行支付或年龄验证时，很可能会遭遇失败或拒绝。
+为了解决这些问题，我们需要更加审慎地选择注册方式和网络环境。在注册时，应尽量避免使用国内邮箱，而是选择国际邮箱服务，以降低触发平台验证机制的风险。同时，对于IP地址的问题，我们应确保使用的IP符合Onlyfans的要求，必要时可以借助虚拟卡平台或梯子等工具，将IP改为境外节点，以提高支付和验证的成功率。
+通过注意这些细节，我们不仅可以避免在Onlyfans平台上遇到各种问题，还能更加顺畅地享受该平台提供的服务。
+
+
+精选文章
+
+
+类别
+教程
+
+
+
+Claude
+如何解决Claude账号被封，及Claude3使用方法Claude3注册教程，解决Claude手机号验证问题 Anthropic官网提供Claude3注册及使用教程|以 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/setup-palu-server-on-aliyun/" title="【亲测】阿里云ECS搭建《幻兽帕鲁》联机服务器"><img class="post-bg" src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/image-20240314214058588.png" onerror="this.onerror=null;this.src='/img/loading.gif'" alt="【亲测】阿里云ECS搭建《幻兽帕鲁》联机服务器"></a></div><div class="recent-post-info"><a class="article-title" href="/setup-palu-server-on-aliyun/" title="【亲测】阿里云ECS搭建《幻兽帕鲁》联机服务器"><i class="fas fa-thumbtack sticky"></i>【亲测】阿里云ECS搭建《幻兽帕鲁》联机服务器</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-03-14T13:34:59.000Z" title="发表于 2024-03-14 21:34:59">2024-03-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/c/Other/">Other</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/c/Other/%E5%B9%BB%E5%85%BD%E5%B8%95%E9%B2%81/">幻兽帕鲁</a></span></div><div class="content">近日，由Pocketpair推出的生存类游戏《幻兽帕鲁》在网络上掀起了一股热潮，最高在线人数已逼近200万大关。然而，随着玩家数量的激增，官方服务器压力山大，难以提供稳定流畅的游戏体验。幸运的是，游戏开发商提供了搭建私人专用服务器的方案，让玩家们能够和好友们一同联机冒险，甚至还能享受自定义经验翻倍等独特游戏设置。
+那么，如何迅速拥有一个能与小伙伴们畅享游戏的专用服务器呢？本文将为您详细解读在阿里云上快速部署《幻兽帕鲁》联机服务器的全过程。您只需按照页面提示选择相关配置，服务器创建、网络端口设置、防火墙配置以及游戏环境安装等繁琐步骤都将自动完成，全程仅需2~3分钟，无需任何手动配置，让您轻松搭建起一个专属于自己的游戏世界，与好友们尽情探索、战斗，享受无与伦比的游戏乐趣！
+
+
+精选文章
+
+
+类别
+教程
+
+
+
+Claude
+如何解决Claude账号被封，及Claude3使用方法Claude3注册教程，解决Claude手机号验证问题 Anthropic官网提供Claude3注册及使用教程|以及如何预防封号
+
+
+Sora
+详细教程与使用指南助您轻松上手SoraOpenAI Sora是什么？Sor ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/how-to-search-blogger-on-onlyfans/" title="【2024亲测】Onlyfans搜索博主教程"><img class="post-bg" src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/image-20240320233625406.png" onerror="this.onerror=null;this.src='/img/loading.gif'" alt="【2024亲测】Onlyfans搜索博主教程"></a></div><div class="recent-post-info"><a class="article-title" href="/how-to-search-blogger-on-onlyfans/" title="【2024亲测】Onlyfans搜索博主教程"><i class="fas fa-thumbtack sticky"></i>【2024亲测】Onlyfans搜索博主教程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-03-14T02:58:28.000Z" title="发表于 2024-03-14 10:58:28">2024-03-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/c/Onlyfans/">Onlyfans</a></span></div><div class="content">【必看】如何订阅Onlyfans订阅OnlyFans的步骤简要总结如下：
+
+使用虚拟信用卡平台WildCard开通虚拟信用卡注册教程。
+开卡后，进入WIldcard首页，就能看到自己的虚拟信用卡信息
+把虚拟信用卡的信息填写到OnlyFans绑定信用卡界面就行啦
+
+总费用：开卡费9.9美元+OnlyFans订阅费用，全程使用支付宝支付，安全快捷。
+
+
+精选文章
+
+
+类别
+教程
+
+
+
+Claude
+如何解决Claude账号被封，及Claude3使用方法Claude3注册教程，解决Claude手机号验证问题 Anthropic官网提供Claude3注册及使用教程|以及如何预防封号
+
+
+Sora
+详细教程与使用指南助您轻松上手SoraOpenAI Sora是什么？Sora到底能做什么？它与其他类似技术有什么区别
+
+
+ChatGPT
+国内升级GPT-Plus教程，订阅GTP4-0国内无需手机验证码获取GPT账号教程【2024亲测】保姆级获取美区Apple Id教程
+
+
+Onlyfans
+Onlyfans-注册以及充值、订阅教程【2024亲测】Onlyfans搜索博主？如何在OnlyFans搜索H ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/github-copilot-on-vscode/" title="【保姆级】VsCode 安装GitHub Copilot实操教程"><img class="post-bg" src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/image-20240318004026003.png" onerror="this.onerror=null;this.src='/img/loading.gif'" alt="【保姆级】VsCode 安装GitHub Copilot实操教程"></a></div><div class="recent-post-info"><a class="article-title" href="/github-copilot-on-vscode/" title="【保姆级】VsCode 安装GitHub Copilot实操教程"><i class="fas fa-thumbtack sticky"></i>【保姆级】VsCode 安装GitHub Copilot实操教程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-03-14T01:49:50.000Z" title="发表于 2024-03-14 09:49:50">2024-03-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/c/Other/">Other</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/c/Other/Web%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">Web前端技术</a></span></div><div class="content">前言GitHub Copilot，俗称“副驾驶”，是GitHub携手OpenAI共同打造的一款革命性的人工智能代码辅助工具。通过将其插件化集成至编辑器（如VS Code），Copilot能够为用户提供强大的代码自动补全功能，并根据用户输入的注释快速生成相应代码。此外，它还能协助解释代码逻辑，自动生成测试代码，以及为代码片段添加注释，从而极大地提升了开发者的编程效率与代码质量。
+
+
+精选文章
+
+
+类别
+教程
+
+
+
+Claude
+如何解决Claude账号被封，及Claude3使用方法Claude3注册教程，解决Claude手机号验证问题 Anthropic官网提供Claude3注册及使用教程|以及如何预防封号
+
+
+Sora
+详细教程与使用指南助您轻松上手SoraOpenAI Sora是什么？Sora到底能做什么？它与其他类似技术有什么区别
+
+
+ChatGPT
+国内升级GPT-Plus教程，订阅GTP4-0国内无需手机验证码获取GPT账号教程【2024亲测】保姆级获取美区Apple Id教程
+
+
+Onlyfans
+Onlyfans-注册以及充值、订阅教程【2024亲测】Onlyfans搜索博 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/register-onlyfans/" title="【保姆级】2024年最新Onlyfans订阅教程"><img class="post-bg" src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/Snipaste_2024-03-20_21-24-43.png" onerror="this.onerror=null;this.src='/img/loading.gif'" alt="【保姆级】2024年最新Onlyfans订阅教程"></a></div><div class="recent-post-info"><a class="article-title" href="/register-onlyfans/" title="【保姆级】2024年最新Onlyfans订阅教程"><i class="fas fa-thumbtack sticky"></i>【保姆级】2024年最新Onlyfans订阅教程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-03-14T01:49:50.000Z" title="发表于 2024-03-14 09:49:50">2024-03-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/c/Onlyfans/">Onlyfans</a></span></div><div class="content"> 如果你需要使用Wildcard开通GPT4、Midjourney或是Onlyfans的话，请点击：WildCard使用教程
+0. 【必看】开通步骤订阅OnlyFans的步骤简要总结如下：
+
+使用虚拟信用卡平台WildCard开通虚拟信用卡注册教程。
+开卡后，进入WIldcard首页，就能看到自己的虚拟信用卡信息
+把虚拟信用卡的信息填写到OnlyFans绑定信用卡界面就行啦
+
+总费用：开卡费9.9美元+OnlyFans订阅费用，全程使用支付宝支付，安全快捷。
+1. Onlyfans介绍OnlyFans是一个创立于2016年的在线平台和应用程序，它集结了众多来自健身、音乐、艺术等领域的内容创作者，呈现了他们精彩纷呈的作品。该平台颠覆了传统商业模式，为创作者提供了一个展示独特内容的舞台，用户则需要付费才能观看这些独家内容。
+这种创新的商业模式不仅赋予了创作者更多的自主权和收入来源，也树立了全新的消费观念，让用户有机会尊重和支持他们所喜爱的创作者。
+在OnlyFans上，普通用户可以通过三种灵活的方式向创作者付费：订阅、内容解密和打赏。这种机制激励了创作者持续产出更高质量的内容，从而吸引更多 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/register-wildcard/" title="WildCard虚拟信用卡注册保姆级教程"><img class="post-bg" src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/image-20240314234451529.png" onerror="this.onerror=null;this.src='/img/loading.gif'" alt="WildCard虚拟信用卡注册保姆级教程"></a></div><div class="recent-post-info"><a class="article-title" href="/register-wildcard/" title="WildCard虚拟信用卡注册保姆级教程"><i class="fas fa-thumbtack sticky"></i>WildCard虚拟信用卡注册保姆级教程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-03-09T06:00:50.000Z" title="发表于 2024-03-09 14:00:50">2024-03-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/c/WildCard/">WildCard</a></span></div><div class="content">1、什么是虚拟信用卡虚拟信用卡是一种数字化的信用卡形式，提供一次性或多次性使用的卡号，专用于在线交易，无需出示实体信用卡。此类卡多由信用卡发行机构或数字支付服务供应商提供，其主要目的在于通过设定使用次数、金额上限及有效期等限制，增强交易安全性，降低欺诈风险，并保护用户的真实账户信息。
+虚拟信用卡与实体信用卡在功能和使用上并无显著差别，均具备CVV安全码、持卡人姓名、账单地址以及完整的卡号等信息，可用于购买各类服务。用户在使用虚拟信用卡时，体验与实体信用卡无异，既方便又安全。
+
+
+
+精选文章
+
+
+类别
+教程
+
+
+
+Claude
+如何解决Claude账号被封，及Claude3使用方法Claude3注册教程，解决Claude手机号验证问题 Anthropic官网提供Claude3注册及使用教程|以及如何预防封号
+
+
+Sora
+详细教程与使用指南助您轻松上手SoraOpenAI Sora是什么？Sora到底能做什么？它与其他类似技术有什么区别
+
+
+ChatGPT
+国内升级GPT-Plus教程，订阅GTP4-0国内无需手机验证码获取GPT账号教程【2024亲测】保姆级获取美区Apple Id教程 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/alioss-picgo-typora/" title="【保姆级】阿里云OSS+PicGo+Typora搭建图床"><img class="post-bg" src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/20240312121239.png" onerror="this.onerror=null;this.src='/img/loading.gif'" alt="【保姆级】阿里云OSS+PicGo+Typora搭建图床"></a></div><div class="recent-post-info"><a class="article-title" href="/alioss-picgo-typora/" title="【保姆级】阿里云OSS+PicGo+Typora搭建图床"><i class="fas fa-thumbtack sticky"></i>【保姆级】阿里云OSS+PicGo+Typora搭建图床</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-03-08T07:49:50.000Z" title="发表于 2024-03-08 15:49:50">2024-03-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/c/Other/">Other</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/c/Other/Typora/">Typora</a></span></div><div class="content">​	图床，作为储存图片的服务器，主要分为国内和国外两种类型。由于空间距离等因素，国外的图床在访问速度上可能较慢，进而影响图片的显示速度。而在国内，图床又可分为单线空间、多线空间和CDN加速三种形式，各具特色。
+​	简而言之，图床就是存储图片的地方，为每一张图片提供一个独一无二的链接，使得用户能够轻松地在网上访问和查看。
+​	当前，市场上涌现出众多免费图床供用户选择，如Gitee、Github等。然而，使用免费图床也存在一些潜在问题，如图床失效、防盗链等。因此，在选择图床时，用户需要权衡各种因素，确保图片的稳定性和安全性。因此，为了避免这些问题，搭建自己的图床成为了一个备受欢迎的解决方案，通过搭建自己的图床，用户可以确保图片的稳定性和安全性，同时更好地掌控和管理自己的图片资源。
+
+
+一、精选文章
+
+
+类别
+教程
+
+
+
+Claude
+如何解决Claude账号被封，及Claude3使用方法Claude3注册教程，解决Claude手机号验证问题 Anthropic官网提供Claude3注册及使用教程|以及如何预防封号
+
+
+Sora
+详细教程与使用指南助您轻松上手SoraOpenAI Sora是 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/register-claude3/" title="【亲测】使用WildCard开通Claude3"><img class="post-bg" src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/image-20240314235306848.png" onerror="this.onerror=null;this.src='/img/loading.gif'" alt="【亲测】使用WildCard开通Claude3"></a></div><div class="recent-post-info"><a class="article-title" href="/register-claude3/" title="【亲测】使用WildCard开通Claude3"><i class="fas fa-thumbtack sticky"></i>【亲测】使用WildCard开通Claude3</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-03-08T07:49:50.000Z" title="发表于 2024-03-08 15:49:50">2024-03-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/c/Claude3/">Claude3</a></span></div><div class="content">随着Claude3的震撼发布，最强AI模型的桂冠已不再由GPT-4独揽。
+Claude3此次推出了三个备受瞩目的模型，分别是Claude 3 Haiku、Claude 3 Sonnet以及Claude 3 Opus，每个模型都展现了卓越的性能与特色。
+在数据层面，Claude 3 Opus更是实现了对GPT-4的全面超越。以下是对Claude 3系列模型与业界同行在多个性能基准上的精彩比较，凸显了其卓越实力。
+
+
+
+在尝试注册Claude3时，许多用户报告遇到了一个常见的障碍——无法接收到手机验证码。这个问题尤其困扰那些没有海外手机号的用户。幸运的是，有一种解决方案可以帮助你顺利完成注册过程。本文将详细介绍如何利用WildCard服务提供的海外手机号进行Claude3注册。
+注册Claude3教程1：获取Wildcard海外手机号
+访问WildCard官方网站（从链接进入可以优惠两美元）。
+
+根据网站指示注册账户。
+
+进入网站，找到工具箱-海外手机号 菜单栏，点击“立即申请”。（下图是已经申请成功的界面）
+
+
+每个账号有三次免费申请的机会，而且网站说即使你用了手机号，也可能会失败。我运 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/subscribe-chatgpt-plus-in-five-minutes/" title="使用支付宝五分钟开通GPT4.0"><img class="post-bg" src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/image-20240313141543414.png" onerror="this.onerror=null;this.src='/img/loading.gif'" alt="使用支付宝五分钟开通GPT4.0"></a></div><div class="recent-post-info"><a class="article-title" href="/subscribe-chatgpt-plus-in-five-minutes/" title="使用支付宝五分钟开通GPT4.0"><i class="fas fa-thumbtack sticky"></i>使用支付宝五分钟开通GPT4.0</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-03-08T07:49:50.000Z" title="发表于 2024-03-08 15:49:50">2024-03-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/c/OpenAI/">OpenAI</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/c/OpenAI/ChatGPT/">ChatGPT</a></span></div><div class="content">由于各种原因，开通GPT4.0一直是一个让人头痛的问题。在这里，我要分享一种简单便捷的方式开通GPT4.0。在开通GPT4.0之前，请确保您的ChatGPT账号状态正常，可以顺利访问ChatGPT，并且全程使用美国区环境并开启全局代理。
+
+
+精选文章
+
+
+类别
+教程
+
+
+
+Claude
+如何解决Claude账号被封，及Claude3使用方法Claude3注册教程，解决Claude手机号验证问题 Anthropic官网提供Claude3注册及使用教程|以及如何预防封号
+
+
+Sora
+详细教程与使用指南助您轻松上手SoraOpenAI Sora是什么？Sora到底能做什么？它与其他类似技术有什么区别
+
+
+ChatGPT
+国内升级GPT-Plus教程，订阅GTP4-0国内无需手机验证码获取GPT账号教程【2024亲测】保姆级获取美区Apple Id教程
+
+
+Onlyfans
+Onlyfans-注册以及充值、订阅教程【2024亲测】Onlyfans搜索博主？如何在OnlyFans搜索HongkongDoll
+
+
+Midjourney
+【一看就会】五分钟完成MidJourney订阅
+
+
+Wild ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/subscribe-chatgpt-team-in-five-minutes/" title="五分钟开通ChatGPT Team"><img class="post-bg" src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/20240312121923.png" onerror="this.onerror=null;this.src='/img/loading.gif'" alt="五分钟开通ChatGPT Team"></a></div><div class="recent-post-info"><a class="article-title" href="/subscribe-chatgpt-team-in-five-minutes/" title="五分钟开通ChatGPT Team"><i class="fas fa-thumbtack sticky"></i>五分钟开通ChatGPT Team</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-03-08T07:49:50.000Z" title="发表于 2024-03-08 15:49:50">2024-03-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/c/OpenAI/">OpenAI</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/c/OpenAI/ChatGPT/">ChatGPT</a></span></div><div class="content">前言ChatGPT Team是OpenAI在2023年下半年推出的一种会员计划，旨在为企业和团队用户提供更加专业和高级的服务。
+与ChatGPT Plus版本相比，Team版本不仅能访问ChatGPT4、DALLE等高级模型，还提供了更长的上下文窗口、更多的对话次数，并且保证用户产生的数据不会被用于训练GPT模型。
+
+这一计划特别适合需要高频使用ChatGPT服务且对数据隐私有较高要求的企业用户。
+
+
+精选文章
+
+
+类别
+教程
+
+
+
+Claude
+如何解决Claude账号被封，及Claude3使用方法Claude3注册教程，解决Claude手机号验证问题 Anthropic官网提供Claude3注册及使用教程|以及如何预防封号
+
+
+Sora
+详细教程与使用指南助您轻松上手SoraOpenAI Sora是什么？Sora到底能做什么？它与其他类似技术有什么区别
+
+
+ChatGPT
+国内升级GPT-Plus教程，订阅GTP4-0国内无需手机验证码获取GPT账号教程【2024亲测】保姆级获取美区Apple Id教程
+
+
+Onlyfans
+Onlyfans-注册以及充值、订阅教程【2024亲测】 ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/6/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/#content-inner">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/#content-inner">8</a><a class="extend next" rel="next" href="/page/8/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/images/loading.gif" data-original="/images/logo.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">功夫猫猫</div><div class="author-info__description">我是功夫猫猫，一名热爱AIGC的博主，如果你觉得我的文章内容还不错请收藏转发吧</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">79</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a><a href="/c/"><div class="headline">分类</div><div class="length-num">20</div></a></div></div><div class="card-widget tzy-right-widget" id="card-wechat"><div id="flip-wrapper"><div id="flip-content"><div class="face"></div><div class="back face"></div></div></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/how-to-subscribe-gpt-claude-poe-github/" title="(2024教程）ChatGPT、OnlyFans、perplexity、Claude、Poe等信用卡银行卡无法绑定，无法支付等问题解决方法">(2024教程）ChatGPT、OnlyFans、perplexity、Claude、Poe等信用卡银行卡无法绑定，无法支付等问题解决方法</a><time datetime="2024-08-09T04:46:53.000Z" title="发表于 2024-08-09 12:46:53">2024-08-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/fomepay-fomecard-run-away/" title="网传fomepay和fomecard虚拟卡平台跑路了！"><img src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/Snipaste20240810221112.jpg" onerror="this.onerror=null;this.src='/img/loading.gif'" alt="网传fomepay和fomecard虚拟卡平台跑路了！"/></a><div class="content"><a class="title" href="/fomepay-fomecard-run-away/" title="网传fomepay和fomecard虚拟卡平台跑路了！">网传fomepay和fomecard虚拟卡平台跑路了！</a><time datetime="2024-08-08T04:46:53.000Z" title="发表于 2024-08-08 12:46:53">2024-08-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/hello-world2/" title="Hello World">Hello World</a><time datetime="2024-07-25T16:30:03.973Z" title="发表于 2024-07-26 00:30:03">2024-07-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/hello-world1/" title="Hello World">Hello World</a><time datetime="2024-07-25T16:29:57.077Z" title="发表于 2024-07-26 00:29:57">2024-07-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/chatgpt-paper-steps/" title="ChatGPT写论文必学技巧！ChatGPT十步搞定论文写作！全流程指导！附提示词"><img src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/Snipaste20240725151842.png" onerror="this.onerror=null;this.src='/img/loading.gif'" alt="ChatGPT写论文必学技巧！ChatGPT十步搞定论文写作！全流程指导！附提示词"/></a><div class="content"><a class="title" href="/chatgpt-paper-steps/" title="ChatGPT写论文必学技巧！ChatGPT十步搞定论文写作！全流程指导！附提示词">ChatGPT写论文必学技巧！ChatGPT十步搞定论文写作！全流程指导！附提示词</a><time datetime="2024-07-25T04:46:53.000Z" title="发表于 2024-07-25 12:46:53">2024-07-25</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/c/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a>
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/c/Claude3/"><span class="card-category-list-name">Claude3</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/c/FomePay/"><span class="card-category-list-name">FomePay</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/c/MidJourney/"><span class="card-category-list-name">MidJourney</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/c/Onlyfans/"><span class="card-category-list-name">Onlyfans</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/c/OpenAI/"><span class="card-category-list-name">OpenAI</span><span class="card-category-list-count">46</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/c/OpenAI/ChatGPT/"><span class="card-category-list-name">ChatGPT</span><span class="card-category-list-count">41</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/c/OpenAI/Sora/"><span class="card-category-list-name">Sora</span><span class="card-category-list-count">5</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/c/Other/"><span class="card-category-list-name">Other</span><span class="card-category-list-count">13</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Patreon/" style="font-size: 1.18em; color: #999ca1">Patreon</a> <a href="/tags/GitHub-Copilot/" style="font-size: 1.18em; color: #999ca1">GitHub Copilot</a> <a href="/tags/ChatGPT/" style="font-size: 1.5em; color: #99a9bf">ChatGPT</a> <a href="/tags/Typora/" style="font-size: 1.1em; color: #999">Typora</a> <a href="/tags/ChatGPT-Poe/" style="font-size: 1.18em; color: #999ca1">ChatGPT,Poe</a> <a href="/tags/MidJourney/" style="font-size: 1.34em; color: #99a3b0">MidJourney</a> <a href="/tags/VsCode/" style="font-size: 1.18em; color: #999ca1">VsCode</a> <a href="/tags/Grok/" style="font-size: 1.18em; color: #999ca1">Grok</a> <a href="/tags/FomePay/" style="font-size: 1.1em; color: #999">FomePay</a> <a href="/tags/WildCard/" style="font-size: 1.26em; color: #999fa8">WildCard</a> <a href="/tags/Fantia/" style="font-size: 1.1em; color: #999">Fantia</a> <a href="/tags/Apple-Id/" style="font-size: 1.1em; color: #999">Apple Id</a> <a href="/tags/Claude3/" style="font-size: 1.26em; color: #999fa8">Claude3</a> <a href="/tags/OpenAI/" style="font-size: 1.42em; color: #99a6b7">OpenAI</a> <a href="/tags/miniProgram/" style="font-size: 1.1em; color: #999">miniProgram</a> <a href="/tags/Onlyfans/" style="font-size: 1.34em; color: #99a3b0">Onlyfans</a> <a href="/tags/PicGo/" style="font-size: 1.1em; color: #999">PicGo</a> <a href="/tags/Spotify/" style="font-size: 1.1em; color: #999">Spotify</a> <a href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/" style="font-size: 1.18em; color: #999ca1">阿里云</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/08/"><span class="card-archive-list-date">八月 2024</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/07/"><span class="card-archive-list-date">七月 2024</span><span class="card-archive-list-count">11</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/04/"><span class="card-archive-list-date">四月 2024</span><span class="card-archive-list-count">15</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/03/"><span class="card-archive-list-date">三月 2024</span><span class="card-archive-list-count">50</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/02/"><span class="card-archive-list-date">二月 2024</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">79</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">124.1k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-08-10T18:18:24.869Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="ft"><div class="ft-item-2"><p class="ft-t">推荐友链</p><div class="ft-img-group"><div class="img-group-item"><a target="_blank" rel="noopener" href="https://7we.cn/">火哥研习社</a></div></div></div></div><div class="copyright">&copy;2020 - 2024 By 功夫猫猫</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.14.0-b3"></script><script src="/js/main.js?v=4.14.0-b3"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.35/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  const runMermaid = (ele) => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from(ele).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const codeToMermaid = () => {
+    const codeMermaidEle = document.querySelectorAll('pre > code.mermaid')
+    if (codeMermaidEle.length === 0) return
+    
+    codeMermaidEle.forEach(ele => {
+      const newEle = document.createElement('div')
+      newEle.className = 'mermaid-wrap'
+      newEle.innerHTML = `<pre class="mermaid-src" hidden>${ele.textContent}</pre>`
+      ele.parentNode.replaceWith(newEle)
+    })
+  }
+
+  const loadMermaid = () => {
+    if (false) codeToMermaid()
+    const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+    if ($mermaid.length === 0) return
+
+    const runMermaidFn = () => runMermaid($mermaid)
+    btf.addGlobalFn('themeChange', runMermaidFn, 'mermaid')
+    window.loadMermaid ? runMermaidFn() : btf.getScript('https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js').then(runMermaidFn)
+  }
+  
+  btf.addGlobalFn('encrypt', loadMermaid, 'mermaid')
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/fireworks.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div>
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var a=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,d=o();function o(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(t){(a||t)&&(d=o());for(var e,i=0;i<d.length;i++)0<=(e=(e=d[i]).getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,a,n,o=d[i];e=function(){d=d.filter(function(t){return o!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(o)},(t=o).dataset.loaded||(t.hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(a=new Image,n=t.getAttribute("data-original"),a.onload=function(){t.src=n,t.removeAttribute("data-original"),t.setAttribute("data-loaded",!0),e&&e()},a.onerror=function(){t.removeAttribute("data-original"),t.setAttribute("data-loaded",!1),t.src=n},t.src!==n&&(a.src=n)))}()}function e(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",e),r.addEventListener("resize",e),r.addEventListener("orientationchange",e)}(this);</script></body></html>

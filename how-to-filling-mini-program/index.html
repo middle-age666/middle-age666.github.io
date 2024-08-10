@@ -1,0 +1,786 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>微信小程序备案流程详细操作指南 | 功夫猫猫</title><meta name="author" content="功夫猫猫"><meta name="copyright" content="功夫猫猫"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="微信小程序备案流程详细操作指南">
+<meta property="og:type" content="article">
+<meta property="og:title" content="微信小程序备案流程详细操作指南">
+<meta property="og:url" content="https://0ks.cn/how-to-filling-mini-program/index.html">
+<meta property="og:site_name" content="功夫猫猫">
+<meta property="og:description" content="微信小程序备案流程详细操作指南">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://mvkersc.oss-cn-beijing.aliyuncs.com/image-20240328123745172.png">
+<meta property="article:published_time" content="2024-03-28T03:49:50.000Z">
+<meta property="article:modified_time" content="2024-08-10T16:23:34.770Z">
+<meta property="article:author" content="功夫猫猫">
+<meta property="article:tag" content="miniProgram">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mvkersc.oss-cn-beijing.aliyuncs.com/image-20240328123745172.png"><link rel="shortcut icon" href="/images/logo.jpg"><link rel="canonical" href="https://0ks.cn/how-to-filling-mini-program/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.14.0-b3"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.35/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>(()=>{
+      const saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+      
+      window.btf = {
+        saveToLocal: saveToLocal,
+        getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+          script.src = url
+          script.async = true
+          script.onerror = reject
+          script.onload = script.onreadystatechange = function() {
+            const loadState = this.readyState
+            if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+            script.onload = script.onreadystatechange = null
+            resolve()
+          }
+
+          Object.keys(attr).forEach(key => {
+            script.setAttribute(key, attr[key])
+          })
+
+          document.head.appendChild(script)
+        }),
+
+        getCSS: (url, id = false) => new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+          link.rel = 'stylesheet'
+          link.href = url
+          if (id) link.id = id
+          link.onerror = reject
+          link.onload = link.onreadystatechange = function() {
+            const loadState = this.readyState
+            if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+            link.onload = link.onreadystatechange = null
+            resolve()
+          }
+          document.head.appendChild(link)
+        }),
+
+        addGlobalFn: (key, fn, name = false, parent = window) => {
+          const pjaxEnable = false
+          if (!pjaxEnable && key.startsWith('pjax')) return
+
+          const globalFn = parent.globalFn || {}
+          const keyObj = globalFn[key] || {}
+    
+          if (name && keyObj[name]) return
+    
+          name = name || Object.keys(keyObj).length
+          keyObj[name] = fn
+          globalFn[key] = keyObj
+          parent.globalFn = globalFn
+        }
+      }
+    
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+      
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })()</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":true,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '微信小程序备案流程详细操作指南',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-08-11 00:23:34'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="功夫猫猫" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/images/loading.gif" data-original="/images/logo.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">79</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a><a href="/c/"><div class="headline">分类</div><div class="length-num">20</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/c/WildCard/"><i class="fa-fw fas fa-archive"></i><span> WildCard虚拟信用卡</span></a></div><div class="menus_item"><a class="site-page" href="/c/OpenAI/ChatGPT/"><i class="fa-fw fas fa-tags"></i><span> ChatGPT</span></a></div><div class="menus_item"><a class="site-page" href="/c/OpenAI/Sora/"><i class="fa-fw fas fa-music"></i><span> Sora</span></a></div><div class="menus_item"><a class="site-page" href="/c/Onlyfans/"><i class="fa-fw fas fa-video"></i><span> OnlyFans</span></a></div><div class="menus_item"><a class="site-page" href="/c/MidJourney/"><i class="fa-fw fas fa-link"></i><span> Midjourney</span></a></div><div class="menus_item"><a class="site-page" href="/c/Claude3/"><i class="fa-fw fas fa-heart"></i><span> Claude3</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img fixed" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="功夫猫猫"><img class="site-icon" src="/images/loading.gif" data-original="/images/logo.jpg" alt="Logo"/><span class="site-name">功夫猫猫</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/c/WildCard/"><i class="fa-fw fas fa-archive"></i><span> WildCard虚拟信用卡</span></a></div><div class="menus_item"><a class="site-page" href="/c/OpenAI/ChatGPT/"><i class="fa-fw fas fa-tags"></i><span> ChatGPT</span></a></div><div class="menus_item"><a class="site-page" href="/c/OpenAI/Sora/"><i class="fa-fw fas fa-music"></i><span> Sora</span></a></div><div class="menus_item"><a class="site-page" href="/c/Onlyfans/"><i class="fa-fw fas fa-video"></i><span> OnlyFans</span></a></div><div class="menus_item"><a class="site-page" href="/c/MidJourney/"><i class="fa-fw fas fa-link"></i><span> Midjourney</span></a></div><div class="menus_item"><a class="site-page" href="/c/Claude3/"><i class="fa-fw fas fa-heart"></i><span> Claude3</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">微信小程序备案流程详细操作指南</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-03-28T03:49:50.000Z" title="发表于 2024-03-28 11:49:50">2024-03-28</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-08-10T16:23:34.770Z" title="更新于 2024-08-11 00:23:34">2024-08-11</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/c/Other/">Other</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/c/Other/Web%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">Web前端技术</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">4.7k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>13分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="微信小程序备案流程详细操作指南"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="post-content" id="article-container"><p>自2023年9月1日起，所有新上架的微信小程序均需事先完成备案手续，方能成功上线。而对于已经上架的存量小程序，也需要在2024年3月31日前完成备案工作。若在规定时间内未完成备案，平台将依据备案相关规定，自2024年4月1日起对未备案的小程序进行清退处理。为确保小程序能够持续稳定地运营，请务必按照时间节点完成备案流程。</p>
+<p><img src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/image-20240328134641987.png" alt="image-20240328134641987"></p>
+<span id="more"></span>
+
+<h2 id="精选文章"><a href="#精选文章" class="headerlink" title="精选文章"></a>精选文章</h2><table>
+<thead>
+<tr>
+<th align="left">类别</th>
+<th align="left">教程</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Claude</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://7we.cn/resolve-claude3-banned/">如何解决Claude账号被封，及Claude3使用方法</a><br /><a target="_blank" rel="noopener" href="https://7we.cn/register-claude3/"><font color="ff8000">Claude3注册教程，解决Claude手机号验证问题</font></a><br /> <a target="_blank" rel="noopener" href="https://7we.cn/register-claude3-anthropic/">Anthropic官网提供Claude3注册及使用教程|以及如何预防封号</a></td>
+</tr>
+<tr>
+<td align="left">Sora</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://7we.cn/how-to-use-sora/"><font color="ff8000">详细教程与使用指南助您轻松上手Sora</font></a><br /><a target="_blank" rel="noopener" href="https://7we.cn/what-is-sora/"><font color="ff8000">OpenAI Sora是什么？Sora到底能做什么？它与其他类似技术有什么区别</font></a></td>
+</tr>
+<tr>
+<td align="left">ChatGPT</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://7we.cn/subscribe-chatgpt-plus-in-five-minutes/"><font color="ff8000">国内升级GPT-Plus教程，订阅GTP4-0</font></a><br /><a target="_blank" rel="noopener" href="https://7we.cn/register-chatgpt-without-phone/"><font color="ff8000">国内无需手机验证码获取GPT账号教程</font></a><br /><a target="_blank" rel="noopener" href="https://7we.cn/register-apple-id/"><font color="ff8000">【2024亲测】保姆级获取美区Apple Id教程</font></a></td>
+</tr>
+<tr>
+<td align="left">Onlyfans</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://7we.cn/register-onlyfans/"><font color="ff8000">Onlyfans-注册以及充值、订阅教程</font></a><br /><a target="_blank" rel="noopener" href="https://7we.cn/how-to-search-blogger-on-onlyfans/"><font color="ff8000">【2024亲测】Onlyfans搜索博主？如何在OnlyFans搜索HongkongDoll</font></a></td>
+</tr>
+<tr>
+<td align="left">Midjourney</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://7we.cn/subscribe-midjourney/"><font color="ff8000">【一看就会】五分钟完成MidJourney订阅</font></a></td>
+</tr>
+<tr>
+<td align="left">WildCard</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://7we.cn/register-wildcard/"><font color="ff8000">WildCard虚拟信用卡注册保姆级教程</font></a><br /><a target="_blank" rel="noopener" href="https://7we.cn/wildcard-info/"><font color="ff8000">WildCard虚拟信用卡平台详解</font></a></td>
+</tr>
+<tr>
+<td align="left">其他</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://7we.cn/register-patreon/"><font color="ff8000">【新手小白教程】2024最新：如何轻松订阅Patreon及其支付、充值全攻略</font></a><br /><a target="_blank" rel="noopener" href="https://7we.cn/register-youtube-premium/"><font color="ff8000">【新手小白】如何订阅Youtube Premium？Youtube Premium购买教程（2024最新）</font></a></td>
+</tr>
+</tbody></table>
+<h2 id="1-相关法律法规"><a href="#1-相关法律法规" class="headerlink" title="1. 相关法律法规"></a><strong>1. 相关法律法规</strong></h2><p>1、《中华人民共和国反电信网络诈骗法》 第二十三条 设立移动互联网应用程序应当按照国家有关规定向电信主管部门办理许可或者备案手续。</p>
+<p>2、《互联网信息服务管理办法》 第四条 国家对经营性互联网信息服务实行许可制度;对非经营性互联网信息服务实行备案制度。未取得许可或者未履行备案手续的，不得从事互联网信息服务。</p>
+<p>第五条 从事新闻、出版、教育、医疗保健、药品和医疗器械等互联网信息服务，依照法律、行政法规以及国家有关规定须经有关主管部门审核同意的，在申请经营许可或者履行备案手续前，应当依法经有关主管部门审核同意。</p>
+<p>3、《非经营性互联网信息服务备案管理办法》 第五条 在中华人民共和国境内提供非经营性互联网信息服务，应当依法履行备案手续。未经备案，不得在中华人民共和国境内从事非经营性互联网信息服务。</p>
+<p>第十一条 拟从事新闻、出版、教育、医疗保健、药品和医疗器械、文化、广播电影电视节目等互联网信息服务，根据法律、行政法规以及国家有关规定应经有关主管部门审核同意的，在履行备案手续时，还应向其住所所在地省通信管理局提交相关主管部门审核同意的文件。</p>
+<p>第十三条 非经营性互联网信息服务提供者应当在其网站开通时在主页底部的中央位置标明其备案编号，并在备案编号下方按要求链接信息产业部备案管理系统网址，供公众查询核对。</p>
+<p>非经营性互联网信息服务提供者应当在其网站开通时，按照信息产业部备案管理系统的要求，将备案电子验证标识放置在其网站的指定目录下。</p>
+<h2 id="2-备案前准备"><a href="#2-备案前准备" class="headerlink" title="2. 备案前准备"></a><strong>2. 备案前准备</strong></h2><h3 id="2-1-备案入口"><a href="#2-1-备案入口" class="headerlink" title="2.1.备案入口"></a>2.1.备案入口</h3><h4 id="未上架小程序"><a href="#未上架小程序" class="headerlink" title="未上架小程序"></a>未上架小程序</h4><p>开发者只需在小程序首页点击「<strong>去备案</strong>」按钮，即可启动备案流程。</p>
+<p><img src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/image-20240328113704977.png" alt="image-20240328113704977"></p>
+<h4 id="已上架小程序"><a href="#已上架小程序" class="headerlink" title="已上架小程序"></a>已上架小程序</h4><p>小程序管理后台顶部会醒目显示「<strong>当前小程序未进行备案</strong>」的提醒，开发者只需点击「<strong>点击办理备案</strong>」，即可进入备案流程。</p>
+<p><img src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/image-20240328113903892.png" alt="image-20240328113903892"></p>
+<p>同样可以在小程序管理后台的「<strong>设置模块</strong>」中，选择“小程序备案”选项，并点击「<strong>去备案</strong>」按钮，即可启动备案流程</p>
+<p><img src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/image-20240328114100251.png" alt="image-20240328114100251"></p>
+<h3 id="2-2-备案类型"><a href="#2-2-备案类型" class="headerlink" title="2.2. 备案类型"></a><strong>2.2. 备案类型</strong></h3><p>新增备案（首次备案）：当主体（无论是个人还是单位）首次需要向省通信管理局提交备案申请时，即进行首次备案。</p>
+<p>变更备案：对于已完成备案的主体和小程序信息，当相关信息需要更新时，需进行变更备案操作。</p>
+<p>注销小程序：若已完成备案的备案记录不再需要，包括注销主体、注销小程序或取消接入，需进行注销小程序的操作。</p>
+<h3 id="2-3-备案材料"><a href="#2-3-备案材料" class="headerlink" title="2.3 备案材料"></a><strong>2.3 备案材料</strong></h3><h4 id="2-3-1-小程序备案材料"><a href="#2-3-1-小程序备案材料" class="headerlink" title="2.3.1 小程序备案材料"></a><strong>2.3.1 小程序备案材料</strong></h4><table>
+<thead>
+<tr>
+<th>小程序备案材料</th>
+<th>提供方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>主办单位证件</td>
+<td>开发者准备</td>
+</tr>
+<tr>
+<td>主体负责人证件</td>
+<td>开发者准备</td>
+</tr>
+<tr>
+<td>小程序负责人证件</td>
+<td>开发者准备</td>
+</tr>
+<tr>
+<td>前置审批&#x2F;专项审批</td>
+<td>开发者准备</td>
+</tr>
+<tr>
+<td>补充材料：根据规则提供包括但不限于授权书、党建证明、居住证、情况说明、承诺书等</td>
+<td>开发者准备</td>
+</tr>
+<tr>
+<td>小程序负责人核验现场拍摄照片电子件</td>
+<td>开发者在平台操作备案时完成</td>
+</tr>
+<tr>
+<td>互联网信息服务承诺书</td>
+<td>开发者在平台操作备案时阅读确认</td>
+</tr>
+<tr>
+<td>小程序备案真实性核验单</td>
+<td>微信平台提供</td>
+</tr>
+</tbody></table>
+<h4 id="2-3-2-前置审批材料"><a href="#2-3-2-前置审批材料" class="headerlink" title="2.3.2 前置审批材料"></a><strong>2.3.2 前置审批材料</strong></h4><p>若您的小程序涉及新闻、出版、药品和医疗器械、网约车等需要有关主管部门审核同意的互联网信息服务，那么在履行备案手续时，必须提供与业务相对应的前置审批文件。以下为相关类目的参考内容：</p>
+<table>
+    <tr>
+        <td style="vertical-align:middle;width:100px;">
+            <p><strong>前置审批类目</strong></p>
+        </td>
+        <td style="vertical-align:middle;width:119.5px;">
+            <p><strong>对应材料</strong></p>
+        </td>
+        <td style="vertical-align:middle;width:120px;">
+            <p><strong>办理部门(参考)</strong></p>
+        </td>
+        <td style="vertical-align:middle;width:389px;">
+            <p><strong>法律法规依据(参考)</strong></p>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="1" rowspan="2" style="vertical-align:middle;width:89px;">
+            <p>出版</p>
+        </td>
+        <td style="vertical-align:top;width:119.5px;">
+            <p>【游戏】根据国家新闻出版署和省、自治区、直辖市出版行政主管部门的规范要求，提供相关材料。</p>
+        </td>
+        <td style="vertical-align:middle;width:90px;">
+            <p>国家新闻出版署省级新闻出版部门</p>
+        </td>
+        <td style="vertical-align:top;width:389px;">
+            <p>《网络出版服务管理规定》第二十七条 网络游戏上网出版前，必须向所在地省、自治区、直辖市出版行政主管部门提出申请，经审核同意后，报国家新闻出版广电总局审批。</p>
+        </td>
+    </tr>
+    <tr>
+        <td style="vertical-align:middle;width:119.5px;">
+            <p>【网络出版】网络出版服务许可证</p>
+        </td>
+        <td style="vertical-align:middle;width:90px;">
+            <p>国家新闻出版署省级新闻出版部门</p>
+        </td>
+        <td style="vertical-align:top;width:389px;">
+            <p>《网络出版服务管理规定》第七条 从事网络出版服务，必须依法经过出版行政主管部门批准，取得《网络出版服务许可证》。</p>
+        </td>
+    </tr>
+    <tr>
+        <td style="vertical-align:middle;width:89px;">
+            <p>广播电影电视节目</p>
+        </td>
+        <td style="vertical-align:middle;width:119.5px;">
+            <p>信息网络传播视听节目许可证</p>
+        </td>
+        <td style="vertical-align:middle;width:90px;">
+            <p>省级广播电视局</p>
+        </td>
+        <td style="vertical-align:top;width:389px;">
+            <p>《互联网视听节目服务管理规定》第七条
+                从事互联网视听节目服务，应当依照本规定取得广播电影电视主管部门颁发的《信息网络传播视听节目许可证》(以下简称《许可证》)或履行备案手续。未按照本规定取得广播电影电视主管部门颁发的《许可证》或履行备案手续，任何单位和个人不得从事互联网视听节目服务。
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td style="vertical-align:middle;width:89px;">
+            <p>药品和医疗器械</p>
+        </td>
+        <td style="vertical-align:middle;width:119.5px;">
+            <p>互联网药品信息服务资格证书</p>
+        </td>
+        <td style="vertical-align:middle;width:90px;">
+            <p>省级药品监督管理局</p>
+        </td>
+        <td style="vertical-align:top;width:389px;">
+            <p>《互联网药品信息服务管理办法》第五条
+                拟提供互联网药品信息服务的网站，应当在向国务院信息产业主管部门或者省级电信管理机构申请办理经营许可证或者办理备案手续之前，按照属地监督管理的原则，向该网站主办单位所在地省、自治区、直辖市食品药品监督管理部门提出申请，经审核同意后取得提供互联网药品信息服务的资格。
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td style="vertical-align:middle;width:89px;">
+            <p>文化</p>
+        </td>
+        <td style="vertical-align:middle;width:119.5px;">
+            <p>网络文化经营许可证</p>
+        </td>
+        <td style="vertical-align:middle;width:90px;">
+            <p>省级文化和旅游部门</p>
+        </td>
+        <td style="vertical-align:top;width:389px;">
+            <p>《互联网文化管理暂行规定》第六条
+                文化部负责制定互联网文化发展与管理的方针、政策和规划，监督管理全国互联网文化活动。省、自治区、直辖市人民政府文化行政部门对申请从事经营性互联网文化活动的单位进行审批，对从事非经营性互联网文化活动的单位进行备案。
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td style="vertical-align:middle;width:89px;">
+            <p>新闻</p>
+        </td>
+        <td style="vertical-align:middle;width:119.5px;">
+            <p>互联网新闻服务许可证</p>
+        </td>
+        <td style="vertical-align:middle;width:90px;">
+            <p>国家互联网信息办公室省级互联网信息办公室</p>
+        </td>
+        <td style="vertical-align:top;width:389px;">
+            <p>《互联网新闻信息服务管理规定》第五条
+                通过互联网站、应用程序、论坛、博客、微博客、公众账号、即时通信工具、网络直播等形式向社会公众提供互联网新闻信息服务，应当取得互联网新闻信息服务许可，禁止未经许可或超越许可范围开展互联网新闻信息服务活动。前款所称互联网新闻信息服务，包括互联网新闻信息采编发布服务、转载服务、传播平台服务。
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td style="vertical-align:middle;width:89px;">
+            <p>网络预约车</p>
+        </td>
+        <td style="vertical-align:middle;width:119.5px;">
+            <p>网络预约出租汽车经营许可证</p>
+        </td>
+        <td style="vertical-align:middle;width:90px;">
+            <p>省级交通运输主管部门</p>
+        </td>
+        <td style="vertical-align:top;width:389px;">
+            <p>《网络预约出租汽车经营服务管理暂行办法》第十条
+                网约车平台公司应当在取得相应《网络预约出租汽车经营许可证》并向企业注册地省级通信主管部门申请互联网信息服务备案后，方可开展相关业务。备案内容包括经营者真实身份信息、接入信息、出租汽车行政主管部门核发的《网络预约出租汽车经营许可证》等。涉及经营电信业务的，还应当符合电信管理的相关规定。网约车平台公司应当自网络正式联通之日起30日内，到网约车平台公司管理运营机构所在地的省级人民政府公安机关指定的受理机关办理备案手续。
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td style="vertical-align:middle;width:89px;">
+            <p>校外培训</p>
+        </td>
+        <td style="vertical-align:middle;width:119.5px;">
+            <p>教育部门允许开展校外培训的审批文件</p>
+        </td>
+        <td style="vertical-align:middle;width:90px;">
+            <p>省级教育部门</p>
+        </td>
+        <td style="vertical-align:top;width:389px;">
+            <p>《关于进一步减轻义务教育阶段学生作业负担和校外培训负担的意见》四、坚持从严治理，全面规范校外培训行为坚持从严审批机构。各地不再审批新的面向义务教育阶段学生的学科类校外培训机构，现有学科类培训机构统一登记为非营利性机构。对原备案的线上学科类培训机构，改为审批制。各省(自治区、直辖市)要对已备案的线上学科类培训机构全面排查，并按标准重新办理审批手续。未通过审批的，取消原有备案登记和互联网信息服务业务经营许可证(ICP)。对非学科类培训机构，各地要区分体育、文化艺术、科技等类别，明确相应主管部门，分类制定标准、严格审批。依法依规严肃查处不具备相应资质条件、未经审批多址开展培训的校外培训机构。
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td style="vertical-align:middle;width:89px;">
+            <p>宗教</p>
+        </td>
+        <td style="vertical-align:middle;width:119.5px;">
+            <p>省级以上人民政府宗教事务部门审核同意文件</p>
+        </td>
+        <td style="vertical-align:middle;width:90px;">
+            <p>省级宗教事务部门</p>
+        </td>
+        <td style="vertical-align:top;width:389px;">
+            <p>《互联网宗教信息服务管理办法》第六条
+                通过互联网站、应用程序、论坛、博客、微博客、公众账号、即时通信工具、网络直播等形式，以文字、图片、音视频等方式向社会公众提供宗教教义教规、宗教知识、宗教文化、宗教活动等信息的服务，应当取得互联网宗教信息服务许可。
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="1" rowspan="1" style="vertical-align:middle;width:89px;">
+            <p>互联网金融</p>
+        </td>
+        <td colspan="1" rowspan="1" style="vertical-align:middle;width:119.5px;">
+            <p>金融监管部门审批许文件</p>
+        </td>
+        <td colspan="1" rowspan="1" style="vertical-align:middle;width:90px;">
+            <p>省级金融监管部门</p>
+        </td>
+        <td colspan="1" rowspan="1" style="vertical-align:top;width:389px;">
+            <p>《关于促进互联网金融健康发展的指导意见》(十三)互联网行业管理。任何组织和个人开设网站从事互联网金融业务的，除应按规定履行相关金融监管程序外，还应依法向电信主管部门履行网站备案手续，否则不得开展互联网金融业务。工业和信息化部负责对互联网金融业务涉及的电信业务进行监管，国家互联网信息办公室负责对金融信息服务、互联网信息内容等业务进行监管，两部门按职责制定相关监管细则。
+            </p>
+        </td>
+    </tr>
+</table>
+
+
+<h4 id="2-3-3-个人备案"><a href="#2-3-3-个人备案" class="headerlink" title="2.3.3 个人备案"></a><strong>2.3.3 个人备案</strong></h4><p><strong>·</strong> 必需材料：个人有效身份证件。</p>
+<h4 id="2-3-4-非个人备案"><a href="#2-3-4-非个人备案" class="headerlink" title="2.3.4 非个人备案"></a><strong>2.3.4 非个人备案</strong></h4><p><strong>·</strong> 必需材料：单位有效证件、个人有效身份证件。</p>
+<table style="width:657px;">
+    <tbody>
+        <tr>
+            <td style="vertical-align:middle;">
+                <p><strong>资料类型</strong></p>
+            </td>
+            <td style="vertical-align:middle;">
+                <p><strong>单位性质</strong></p>
+            </td>
+            <td style="vertical-align:middle;">
+                <p><strong>证件类型</strong></p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="26" style="vertical-align:middle;">
+                <p>主体证件</p>
+            </td>
+            <td colspan="1" rowspan="2" style="vertical-align:middle;">
+                <p>企业</p>
+            </td>
+            <td style="vertical-align:top;">
+                <p>营业执照(个人或企业)</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align:top;">
+                <p>外国企业常驻代表机构登记证</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="2" style="vertical-align:middle;">
+                <p>政府机关</p>
+            </td>
+            <td style="vertical-align:top;">
+                <p>统一社会信用代码证书</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align:top;">
+                <p>组织机构代码证</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="2" style="vertical-align:middle;">
+                <p>事业单位</p>
+            </td>
+            <td style="vertical-align:top;">
+                <p>事业单位法人证书</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align:top;">
+                <p>组织机构代码证</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="2" style="vertical-align:middle;">
+                <p>社会团体</p>
+            </td>
+            <td style="vertical-align:top;">
+                <p>社会团体法人登记证书</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align:top;">
+                <p>组织机构代码证</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="3" style="vertical-align:middle;">
+                <p>民办非企业单位</p>
+            </td>
+            <td style="vertical-align:top;">
+                <p>民办非企业单位登记证书</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" style="vertical-align:top;">
+                <p>社会服务机构登记证书</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" style="vertical-align:top;">
+                <p>民办学校办学许可证</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" style="vertical-align:top;">
+                <p>公证机构</p>
+            </td>
+            <td colspan="1" rowspan="1" style="vertical-align:top;">
+                <p>公证机构执业证</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="2" style="vertical-align:middle;">
+                <p>国防机构</p>
+            </td>
+            <td colspan="1" rowspan="1" style="vertical-align:top;">
+                <p>部队代号</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" style="vertical-align:top;">
+                <p>军队单位对外有偿服务许可证</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" style="vertical-align:top;">
+                <p>基金会</p>
+            </td>
+            <td colspan="1" rowspan="1" style="vertical-align:top;">
+                <p>基金会法人登记证书</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" style="vertical-align:top;">
+                <p>集体经济</p>
+            </td>
+            <td colspan="1" rowspan="1" style="vertical-align:top;">
+                <p>农村集体经济组织登记证</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" style="vertical-align:top;">
+                <p>境外机构</p>
+            </td>
+            <td colspan="1" rowspan="1" style="vertical-align:top;">
+                <p>境外机构证件</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" style="vertical-align:top;">
+                <p>律师执业机构</p>
+            </td>
+            <td colspan="1" rowspan="1" style="vertical-align:top;">
+                <p>律师事务所执业许可证</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" style="vertical-align:top;">
+                <p>群众性团体组织</p>
+            </td>
+            <td colspan="1" rowspan="1" style="vertical-align:top;">
+                <p>统一社会信用代码证书</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" style="vertical-align:top;">
+                <p>司法鉴定机构</p>
+            </td>
+            <td colspan="1" rowspan="1" style="vertical-align:top;">
+                <p>司法鉴定许可证</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="3" style="vertical-align:middle;">
+                <p>外国在华文化中心</p>
+            </td>
+            <td colspan="1" rowspan="1" style="vertical-align:top;">
+                <p>外国在华文化中心登记证</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" style="vertical-align:top;">
+                <p>外国政府旅游部门常驻代表机构批准登记证</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" style="vertical-align:top;">
+                <p>北京市外国驻华使馆人员子女学校办学许可证</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" style="vertical-align:top;">
+                <p>医疗机构</p>
+            </td>
+            <td colspan="1" rowspan="1" style="vertical-align:top;">
+                <p>医疗机构执业许可证</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" style="vertical-align:top;">
+                <p>仲裁机构</p>
+            </td>
+            <td colspan="1" rowspan="1" style="vertical-align:top;">
+                <p>仲裁委员会登记证</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" style="vertical-align:top;">
+                <p>宗教团体</p>
+            </td>
+            <td colspan="1" rowspan="1" style="vertical-align:top;">
+                <p>宗教活动场所登记证</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="6" style="vertical-align:middle;">
+                <p>负责人证件</p>
+            </td>
+            <td colspan="1" rowspan="6" style="vertical-align:middle;">
+                <p>个人</p>
+            </td>
+            <td colspan="1" rowspan="1" style="vertical-align:top;">
+                <p>居民身份证</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" style="vertical-align:top;">
+                <p>护照</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" style="vertical-align:top;">
+                <p>台湾居民来往大陆通行证</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" style="vertical-align:top;">
+                <p>港澳居民来往内地通行证</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" style="vertical-align:top;">
+                <p>外国人永久居留身份证</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" style="vertical-align:top;">
+                <p>港澳居民居住证</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<p><strong>·</strong> 其他材料：根据各省通信管理要求，上传对应补充材料。</p>
+<h2 id="3-备案整体流程"><a href="#3-备案整体流程" class="headerlink" title="3. 备案整体流程"></a><strong>3. 备案整体流程</strong></h2><p>备案整体流程分为五大环节：信息填写、平台初审、短信核验、通管局审核，最终备案成功。</p>
+<p><img src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/2ba8f24604bd440d84b2a48f99fc7f56.jpeg" alt="图片"></p>
+<h3 id="3-1-备案信息填写"><a href="#3-1-备案信息填写" class="headerlink" title="3.1 备案信息填写"></a><strong>3.1 备案信息填写</strong></h3><h4 id="3-1-1-填写主体信息"><a href="#3-1-1-填写主体信息" class="headerlink" title="3.1.1 填写主体信息"></a>3.1.1 填写主体信息</h4><p>请准确选择地区，并填写真实的通讯地址。上传证件时，请确保是有效证件的清晰彩色扫描件或拍照件，关键信息和图像完整无遮挡，证件边角齐全，且有效期超过一个月。务必按照证件信息如实选择和填写备案资料。</p>
+<p>手机号码需为负责人及应急联系人实际使用且有效的号码，务必保持畅通，切勿多人共用同一号码。</p>
+<p><strong>非个人主体：</strong></p>
+<p><img src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/image-20240328120900510.png" alt="image-20240328120900510"></p>
+<p><img src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/image-20240328121021894.png" alt="image-20240328121021894"></p>
+<p><strong>个人主体：</strong></p>
+<p><img src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/3db63e7cbd67ba775f11aa144e89bb40.jpeg" alt="图片"></p>
+<p><img src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/image-20240328121145298.png" alt="image-20240328121145298"></p>
+<h4 id="3-1-2-填写小程序信息"><a href="#3-1-2-填写小程序信息" class="headerlink" title="3.1.2 填写小程序信息"></a>3.1.2 填写小程序信息</h4><p>若小程序内容涉及前置审批，请上传有效审批文件，并准确填写审批号或文件名。</p>
+<p><img src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/image-20240328121608404.png" alt="image-20240328121608404"></p>
+<h4 id="3-1-3-小程序负责人信息填写及人脸核身"><a href="#3-1-3-小程序负责人信息填写及人脸核身" class="headerlink" title="3.1.3 小程序负责人信息填写及人脸核身"></a><strong>3.1.3 小程序负责人信息填写及人脸核身</strong></h4><p>提示：人脸核身时，请确认背景为纯白色，保持表情自然、无闭眼，穿着得体，不遮挡面部。</p>
+<p><strong>非个人&#x2F;个人主体：默认使用主体负责人信息</strong></p>
+<p><img src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/image-20240328121912256.png" alt="image-20240328121912256"></p>
+<p><strong>非个人&#x2F;个人主体：手动填写小程序负责人信息</strong></p>
+<p><img src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/image-20240328121754619.png" alt="image-20240328121754619"></p>
+<p><img src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/image-20240328122008724.png" alt="image-20240328122008724"></p>
+<h4 id="3-1-4-上传材料"><a href="#3-1-4-上传材料" class="headerlink" title="3.1.4 上传材料"></a>3.1.4 上传材料</h4><p>信息填写最后一步，需要上传小程序负责人授权书的盖章扫描版本，一定要保证图片清晰。接下来就需要等待审核。</p>
+<p><img src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/image-20240328122649366.png" alt="image-20240328122649366"></p>
+<h3 id="3-2-平台初审"><a href="#3-2-平台初审" class="headerlink" title="3.2 平台初审"></a><strong>3.2 平台初审</strong></h3><p>开发者提交小程序备案信息至微信公众平台后，平台通常会在1-2个工作日内完成初审（具体审核时间以实际为准）。审核结果将通过站内信、模板消息等方式及时通知管理员。在初审期间，请备案相关人员确保电话畅通，以便平台能够随时联系您进行备案信息的核验。</p>
+<h3 id="3-3-工信部短信核验"><a href="#3-3-工信部短信核验" class="headerlink" title="3.3 工信部短信核验"></a>3.3 <strong>工信部短信核验</strong></h3><p>根据工信部规定，小程序备案需通过短信核验环节。一旦您的备案初审通过，您将收到来自工信部（发送号码：12381）的核验短信。请您务必在24小时内登录工信部备案官网首页，完成短信核验。核验成功后，您的备案申请将进入通管局审核流程。</p>
+<p>若核验过程中遇到验证码错误或无效的情况，您可尝试触发短信重发功能。若24小时内未能成功完成核验，备案申请将被工信部系统自动驳回。此时，您需前往微信公众平台重新提交备案申请。请您务必注意时间节点，确保备案流程顺利进行。</p>
+<p><img src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/image-20240328122305301.png" alt="image-20240328122305301"></p>
+<p><img src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/image-20240328122318428.png" alt="image-20240328122318428"></p>
+<h3 id="3-4-通管局审核"><a href="#3-4-通管局审核" class="headerlink" title="3.4 通管局审核"></a>3.4 <strong>通管局审核</strong></h3><p>各省通信管理局将在1至20个工作日内（具体审核时间以实际情况为准）完成备案审核。审核结果将通过站内信、模板消息、短信等多种方式及时通知您。请耐心等待，并留意相关通知。</p>
+<h3 id="3-5-备案成功"><a href="#3-5-备案成功" class="headerlink" title="3.5 备案成功"></a>3.5 <strong>备案成功</strong></h3><p>管局审核通过后，将下发小程序备案号，标志着您的小程序已顺利完成备案流程，接下来即可进入版本发布等后续环节。</p>
+<p><img src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/image-20240328122816786.png" alt="image-20240328122816786"></p>
+<h3 id="3-6-备案号悬挂"><a href="#3-6-备案号悬挂" class="headerlink" title="3.6 备案号悬挂"></a>3.6 备案号悬挂</h3><p>小程序成功发布上线后，小程序备案号将自动展示在小程序更多资料页，无需开发者自行悬挂。示例如下：</p>
+<p><img src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/image-20240328134521201.png" alt="image-20240328134521201"></p>
+<blockquote>
+<p>原文链接：<a target="_blank" rel="noopener" href="https://7we.cn/how-to-filling-mini-program/">微信小程序备案流程详细操作指南</a></p>
+</blockquote>
+<hr>
+<p><strong>你好，我是火哥！</strong></p>
+<p>亲爱的读者你好，我是<strong>火哥</strong>，一个乐于分享技术类干货的博主。 最新原创的文章都先发布在公众号，欢迎关注哦~</p>
+<p><strong>扫描下方二维码</strong>，带你第一时间了解ChatGPT、Sora、Midjourney最新动态！</p>
+<p><img src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/9475746462373236362612.png" alt="9475746462373236362612"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://0ks.cn">功夫猫猫</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://0ks.cn/how-to-filling-mini-program/">https://0ks.cn/how-to-filling-mini-program/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://0ks.cn" target="_blank">功夫猫猫</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/miniProgram/">miniProgram</a></div><div class="post_share"><div class="social-share" data-image="https://mvkersc.oss-cn-beijing.aliyuncs.com/image-20240328123745172.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/chatgpt-talk-like-human/" title="如何让ChatGPT说话更像人类"><img class="cover" src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/image-20240328172610273.png" onerror="onerror=null;src='/img/loading.gif'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">如何让ChatGPT说话更像人类</div></div></a></div><div class="next-post pull-right"><a href="/how-to-buy-spotify/" title="2024年Spotify注册、选区及充值使用全攻略"><img class="cover" src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/Snipaste_2024-03-28_01-34-01.png" onerror="onerror=null;src='/img/loading.gif'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">2024年Spotify注册、选区及充值使用全攻略</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/images/loading.gif" data-original="/images/logo.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">功夫猫猫</div><div class="author-info__description">我是功夫猫猫，一名热爱AIGC的博主，如果你觉得我的文章内容还不错请收藏转发吧</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">79</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a><a href="/c/"><div class="headline">分类</div><div class="length-num">20</div></a></div></div><div class="card-widget tzy-right-widget" id="card-wechat"><div id="flip-wrapper"><div id="flip-content"><div class="face"></div><div class="back face"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B2%BE%E9%80%89%E6%96%87%E7%AB%A0"><span class="toc-number">1.</span> <span class="toc-text">精选文章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E7%9B%B8%E5%85%B3%E6%B3%95%E5%BE%8B%E6%B3%95%E8%A7%84"><span class="toc-number">2.</span> <span class="toc-text">1. 相关法律法规</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%A4%87%E6%A1%88%E5%89%8D%E5%87%86%E5%A4%87"><span class="toc-number">3.</span> <span class="toc-text">2. 备案前准备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%A4%87%E6%A1%88%E5%85%A5%E5%8F%A3"><span class="toc-number">3.1.</span> <span class="toc-text">2.1.备案入口</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%AA%E4%B8%8A%E6%9E%B6%E5%B0%8F%E7%A8%8B%E5%BA%8F"><span class="toc-number">3.1.1.</span> <span class="toc-text">未上架小程序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B7%B2%E4%B8%8A%E6%9E%B6%E5%B0%8F%E7%A8%8B%E5%BA%8F"><span class="toc-number">3.1.2.</span> <span class="toc-text">已上架小程序</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%A4%87%E6%A1%88%E7%B1%BB%E5%9E%8B"><span class="toc-number">3.2.</span> <span class="toc-text">2.2. 备案类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E5%A4%87%E6%A1%88%E6%9D%90%E6%96%99"><span class="toc-number">3.3.</span> <span class="toc-text">2.3 备案材料</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-1-%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%A4%87%E6%A1%88%E6%9D%90%E6%96%99"><span class="toc-number">3.3.1.</span> <span class="toc-text">2.3.1 小程序备案材料</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-2-%E5%89%8D%E7%BD%AE%E5%AE%A1%E6%89%B9%E6%9D%90%E6%96%99"><span class="toc-number">3.3.2.</span> <span class="toc-text">2.3.2 前置审批材料</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-3-%E4%B8%AA%E4%BA%BA%E5%A4%87%E6%A1%88"><span class="toc-number">3.3.3.</span> <span class="toc-text">2.3.3 个人备案</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-4-%E9%9D%9E%E4%B8%AA%E4%BA%BA%E5%A4%87%E6%A1%88"><span class="toc-number">3.3.4.</span> <span class="toc-text">2.3.4 非个人备案</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%A4%87%E6%A1%88%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B"><span class="toc-number">4.</span> <span class="toc-text">3. 备案整体流程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E5%A4%87%E6%A1%88%E4%BF%A1%E6%81%AF%E5%A1%AB%E5%86%99"><span class="toc-number">4.1.</span> <span class="toc-text">3.1 备案信息填写</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-1-%E5%A1%AB%E5%86%99%E4%B8%BB%E4%BD%93%E4%BF%A1%E6%81%AF"><span class="toc-number">4.1.1.</span> <span class="toc-text">3.1.1 填写主体信息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-2-%E5%A1%AB%E5%86%99%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BF%A1%E6%81%AF"><span class="toc-number">4.1.2.</span> <span class="toc-text">3.1.2 填写小程序信息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-3-%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B4%9F%E8%B4%A3%E4%BA%BA%E4%BF%A1%E6%81%AF%E5%A1%AB%E5%86%99%E5%8F%8A%E4%BA%BA%E8%84%B8%E6%A0%B8%E8%BA%AB"><span class="toc-number">4.1.3.</span> <span class="toc-text">3.1.3 小程序负责人信息填写及人脸核身</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-4-%E4%B8%8A%E4%BC%A0%E6%9D%90%E6%96%99"><span class="toc-number">4.1.4.</span> <span class="toc-text">3.1.4 上传材料</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E5%B9%B3%E5%8F%B0%E5%88%9D%E5%AE%A1"><span class="toc-number">4.2.</span> <span class="toc-text">3.2 平台初审</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E5%B7%A5%E4%BF%A1%E9%83%A8%E7%9F%AD%E4%BF%A1%E6%A0%B8%E9%AA%8C"><span class="toc-number">4.3.</span> <span class="toc-text">3.3 工信部短信核验</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E9%80%9A%E7%AE%A1%E5%B1%80%E5%AE%A1%E6%A0%B8"><span class="toc-number">4.4.</span> <span class="toc-text">3.4 通管局审核</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-%E5%A4%87%E6%A1%88%E6%88%90%E5%8A%9F"><span class="toc-number">4.5.</span> <span class="toc-text">3.5 备案成功</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-6-%E5%A4%87%E6%A1%88%E5%8F%B7%E6%82%AC%E6%8C%82"><span class="toc-number">4.6.</span> <span class="toc-text">3.6 备案号悬挂</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/how-to-subscribe-gpt-claude-poe-github/" title="(2024教程）ChatGPT、OnlyFans、perplexity、Claude、Poe等信用卡银行卡无法绑定，无法支付等问题解决方法">(2024教程）ChatGPT、OnlyFans、perplexity、Claude、Poe等信用卡银行卡无法绑定，无法支付等问题解决方法</a><time datetime="2024-08-09T04:46:53.000Z" title="发表于 2024-08-09 12:46:53">2024-08-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/fomepay-fomecard-run-away/" title="网传fomepay和fomecard虚拟卡平台跑路了！"><img src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/Snipaste20240810221112.jpg" onerror="this.onerror=null;this.src='/img/loading.gif'" alt="网传fomepay和fomecard虚拟卡平台跑路了！"/></a><div class="content"><a class="title" href="/fomepay-fomecard-run-away/" title="网传fomepay和fomecard虚拟卡平台跑路了！">网传fomepay和fomecard虚拟卡平台跑路了！</a><time datetime="2024-08-08T04:46:53.000Z" title="发表于 2024-08-08 12:46:53">2024-08-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/hello-world2/" title="Hello World">Hello World</a><time datetime="2024-07-25T16:30:03.973Z" title="发表于 2024-07-26 00:30:03">2024-07-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/hello-world1/" title="Hello World">Hello World</a><time datetime="2024-07-25T16:29:57.077Z" title="发表于 2024-07-26 00:29:57">2024-07-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/chatgpt-paper-steps/" title="ChatGPT写论文必学技巧！ChatGPT十步搞定论文写作！全流程指导！附提示词"><img src="/images/loading.gif" data-original="https://mvkersc.oss-cn-beijing.aliyuncs.com/Snipaste20240725151842.png" onerror="this.onerror=null;this.src='/img/loading.gif'" alt="ChatGPT写论文必学技巧！ChatGPT十步搞定论文写作！全流程指导！附提示词"/></a><div class="content"><a class="title" href="/chatgpt-paper-steps/" title="ChatGPT写论文必学技巧！ChatGPT十步搞定论文写作！全流程指导！附提示词">ChatGPT写论文必学技巧！ChatGPT十步搞定论文写作！全流程指导！附提示词</a><time datetime="2024-07-25T04:46:53.000Z" title="发表于 2024-07-25 12:46:53">2024-07-25</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="ft"><div class="ft-item-2"><p class="ft-t">推荐友链</p><div class="ft-img-group"><div class="img-group-item"><a target="_blank" rel="noopener" href="https://7we.cn/">火哥研习社</a></div></div></div></div><div class="copyright">&copy;2020 - 2024 By 功夫猫猫</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.14.0-b3"></script><script src="/js/main.js?v=4.14.0-b3"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.35/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  const runMermaid = (ele) => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from(ele).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const codeToMermaid = () => {
+    const codeMermaidEle = document.querySelectorAll('pre > code.mermaid')
+    if (codeMermaidEle.length === 0) return
+    
+    codeMermaidEle.forEach(ele => {
+      const newEle = document.createElement('div')
+      newEle.className = 'mermaid-wrap'
+      newEle.innerHTML = `<pre class="mermaid-src" hidden>${ele.textContent}</pre>`
+      ele.parentNode.replaceWith(newEle)
+    })
+  }
+
+  const loadMermaid = () => {
+    if (false) codeToMermaid()
+    const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+    if ($mermaid.length === 0) return
+
+    const runMermaidFn = () => runMermaid($mermaid)
+    btf.addGlobalFn('themeChange', runMermaidFn, 'mermaid')
+    window.loadMermaid ? runMermaidFn() : btf.getScript('https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js').then(runMermaidFn)
+  }
+  
+  btf.addGlobalFn('encrypt', loadMermaid, 'mermaid')
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/fireworks.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div>
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var a=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,d=o();function o(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(t){(a||t)&&(d=o());for(var e,i=0;i<d.length;i++)0<=(e=(e=d[i]).getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,a,n,o=d[i];e=function(){d=d.filter(function(t){return o!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(o)},(t=o).dataset.loaded||(t.hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(a=new Image,n=t.getAttribute("data-original"),a.onload=function(){t.src=n,t.removeAttribute("data-original"),t.setAttribute("data-loaded",!0),e&&e()},a.onerror=function(){t.removeAttribute("data-original"),t.setAttribute("data-loaded",!1),t.src=n},t.src!==n&&(a.src=n)))}()}function e(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",e),r.addEventListener("resize",e),r.addEventListener("orientationchange",e)}(this);</script></body></html>
